@@ -5,7 +5,7 @@ export default class Konsul extends Component {
   render() {
     return (
       <View>
-        <Text> textInComponent </Text>
+        <Text>Konsul</Text>
       </View>
     )
   }
