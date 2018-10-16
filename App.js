@@ -1,7 +1,22 @@
 import React, { Component } from "react";
 import { View, Text, FlatList, ActifityIndicator } from "react-native";
 import { List, ListItem, SearchBar } from 'react-native-elements'
+import {StackNavigator} from 'react-navigation'
+import Splash from './src/components/Splash'
 
+
+const Routes= StackNavigator({
+  SplashScreen: {screen: Splash ,navigationOptions:{
+    header:null
+  }},
+});
+export default class App extends React.Component{
+  render(){
+    return(
+      <Routes/>
+    )
+  }
+}
 class FlatListDemo extends Component {
   constructor(props) {
     super(props);
@@ -95,4 +110,3 @@ class FlatListDemo extends Component {
   }
 }
 
-export default FlatListDemo;
