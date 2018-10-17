@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Text, StyleSheet, View,TouchableOpacity,Dimensions, ImageBackground } from 'react-native'
+import { Text, StyleSheet, View,TouchableOpacity,Dimensions, ImageBackground,  } from 'react-native'
 import bgImage from '../src/image/Wave.jpg'
 
 const {width: WIDTH}= Dimensions.get('window')
