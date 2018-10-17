@@ -9,7 +9,7 @@ export default class Menu extends Component {
         <ImageBackground source={bgImage}
         style={styles.backgroundContainer}>
       <View>
-          <TouchableOpacity onPress={()=>this.props.navigation.navigate('Doa')}
+                  <TouchableOpacity onPress={()=>this.props.navigation.navigate('Doa')}
           style={styles.touch}>
         <Text>Kumpulan Doa</Text>
         </TouchableOpacity>
