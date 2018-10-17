@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, ScrollView, TouchableOpacity } from 'react-native';
 import SearchInput, { createFilter } from 'react-native-search-filter';
-import emails from './menu/doa';
+import emails from './doa';
 const KEYS_TO_FILTERS = ['user.name', 'subject'];
  
 export default class App extends Component {
