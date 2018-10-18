@@ -3,6 +3,7 @@ import { Text, StyleSheet, View,TouchableOpacity,Dimensions,Image, ImageBackgrou
 import bgImage from '../src/image/blackg.jpg'
 import Logo from '../src/image/Book3.png'
 import icon1 from '../src/image/viewlist.png'
+import icon2 from '../src/image/bphone.png'
 
 const {width: WIDTH}= Dimensions.get('window')
 export default class Menu extends Component {
@@ -27,6 +28,8 @@ export default class Menu extends Component {
         </TouchableOpacity>
         <TouchableOpacity onPress={()=>this.props.navigation.navigate('Konsul')}
         style={styles.touch2}>
+        <Image source={icon2}
+        style={{borderRadius:10}}/>
         <Text>Konsultasi Syariah</Text>
         </TouchableOpacity>
       </View>
