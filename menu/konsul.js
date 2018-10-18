@@ -10,19 +10,16 @@ export default class Konsul extends Component {
       <ImageBackground source={bgImage}
       style={styles.backgroundContainer}>
       <View>
-      <TouchableOpacity onPress={()=>this.props.navigation.navigate('Konsul')}
+      <TouchableOpacity onPress={()=>this.props.navigation.navigate('UstAulia')}
           style={styles.touch}>
         <Text>Ustad Aulia</Text>
         </TouchableOpacity>
-        <TouchableOpacity onPress={()=>this.props.navigation.navigate('Konsul')}
+        <TouchableOpacity onPress={()=>this.props.navigation.navigate('UstBurhan')}
+          style={styles.touch}>
+        <Text>Ustad Burhan</Text>
+        </TouchableOpacity><TouchableOpacity onPress={()=>this.props.navigation.navigate('UstFauzan')}
           style={styles.touch}>
         <Text>Ustad Fauzan</Text>
-        </TouchableOpacity><TouchableOpacity onPress={()=>this.props.navigation.navigate('Konsul')}
-          style={styles.touch}>
-        <Text>Ustad Hermawan</Text>
-        </TouchableOpacity><TouchableOpacity onPress={()=>this.props.navigation.navigate('Konsul')}
-          style={styles.touch}>
-        <Text>Ustad Andri</Text>
         </TouchableOpacity>
       </View>
       </ImageBackground>
