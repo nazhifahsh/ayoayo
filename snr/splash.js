@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Text, StyleSheet, View,Dimensions,TouchableOpacity, Image, ImageBackground} from 'react-native'
-import bgImage from '../src/image/Greenbluegra.jpg'
+import bgImage from '../src/image/Starsnight.jpg'
 import Logo from '../src/image/Book3.png'
 
 
