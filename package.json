@@ -8,12 +8,14 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.1.2",
+    "project": "^0.1.6",
     "react": "^16.5.0",
     "react-native": "^0.57.3",
     "react-native-communications": "^2.2.1",
     "react-native-elements": "^0.19.1",
     "react-native-search-filter": "^0.1.4",
     "react-native-vector-icons": "^6.0.2",
+    "react-native-video": "^3.2.1",
     "react-navigation": "^2.18.0"
   },
   "devDependencies": {
@@ -26,6 +28,8 @@
     "preset": "react-native"
   },
   "rnpm": {
-    "assets": ["./assets/fonts"]
- }
+    "assets": [
+      "./assets/fonts"
+    ]
+  }
 }
