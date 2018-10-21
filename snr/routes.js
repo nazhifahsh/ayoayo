@@ -4,17 +4,17 @@ import Menu from '../menu/menu';
 import Doa from '../menu/indexdoa';
 import Konsul from '../menu/konsul';
 import UstAulia from '../menu/contactperson/ustadzaulia';
-import UstBurhan from '../menu/contactperson/ustadzaulia';
-import UstFauzan from '../menu/contactperson/ustadzaulia';
+import UstBurhan from '../menu/contactperson/ustadzburhan';
+import UstFauzan from '../menu/contactperson/ustadzfauzan';
 
 
 const Routes = StackNavigator({
     Splash:{screen: Splash, navigationOptions:{header:null} },
     Menu: { screen: Menu, navigationOptions:{header:null} },
     Doa: { screen: Doa, navigationOptions:{header:null} },
-    Konsul:{screen: Konsul, navigationOptions:{header:null} },
-    UstAulia:{screen: UstAulia, navigationOptions:{header:null}},
-    UstBurhan:{screen: UstBurhan, navigationOptions:{header:null}},
-    UstFauzan:{screen: UstFauzan, navigationOptions:{header:null}},
+    Konsul:{screen: Konsul, navigationOptions:{title:'Konsultasi Syariah', headerStyle: {backgroundColor:'#060628'} , headerTitleStyle:{color:'white'}, headerTintColor:'white'} },
+    UstAulia:{screen: UstAulia, navigationOptions:{title:'Contact', headerStyle: {backgroundColor:'#202021'}, headerTitleStyle:{color:'white'}, headerTintColor:'white'}},
+    UstBurhan:{screen: UstBurhan,navigationOptions:{title:'Contact', headerStyle: {backgroundColor:'#202021'}, headerTitleStyle:{color:'white'}, headerTintColor:'white'}},
+    UstFauzan:{screen: UstFauzan,navigationOptions:{title:'Contact', headerStyle: {backgroundColor:'#202021'}, headerTitleStyle:{color:'white'}, headerTintColor:'white'}},
 })
 export default Routes
