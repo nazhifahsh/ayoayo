@@ -27,6 +27,10 @@ export default class Menu extends Component {
         <Image source={icon2}/>
         <Text>Konsultasi Syariah</Text>
         </TouchableOpacity>
+        <TouchableOpacity onPress={()=>this.props.navigation.navigate('QandA')}
+        style={styles.touch}>
+        <Text>Q&A</Text>
+        </TouchableOpacity>
       </View>
       </ImageBackground>
     )
