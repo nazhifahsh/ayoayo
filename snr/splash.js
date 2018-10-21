@@ -13,7 +13,7 @@ export default class Splash extends Component {
       <View>
       <Image source={Logo} style={styles.logo}/>
           <TouchableOpacity onPress={()=>this.props.navigation.navigate('Menu')}>
-        <Text> Tap to Continue </Text>
+        <Text style={{fontFamily:'Poppins-Light'}}> Tap to Continue </Text>
         </TouchableOpacity>
       </View>
       </ImageBackground>
