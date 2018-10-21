@@ -17,6 +17,10 @@ export default class Menu extends Component {
         style={styles.touch}>
         <Text>Konsultasi Syariah</Text>
         </TouchableOpacity>
+        <TouchableOpacity onPress={()=>this.props.navigation.navigate('QandA')}
+        style={styles.touch}>
+        <Text>Q&A</Text>
+        </TouchableOpacity>
       </View>
       </ImageBackground>
     )
