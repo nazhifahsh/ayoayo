@@ -29,11 +29,7 @@
   },
   "rnpm": {
     "assets": [
-<<<<<<< HEAD
-      "./assets/fonts/Spooky Font.ttf"
-=======
       "./assets/fonts"
->>>>>>> fbeb72a0c3376ac89299b9aded45bd64269668dc
     ]
   }
 }
