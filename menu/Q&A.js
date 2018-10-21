@@ -1,4 +1,4 @@
-export default class  {[
+export default class QnA  {[
     {
         user: 'Q1',
         name: 'makan berdiri',

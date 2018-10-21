@@ -1,6 +1,7 @@
 import React,{Component} from 'react';
 import {Text, View ,Image,StyleSheet,Dimensions} from 'react-native';
 import Video from 'react-native-video';
+import LaranganMB from './video/LMB.mp4'
 
 
 export default class LMB extends Component {
@@ -14,7 +15,7 @@ export default class LMB extends Component {
                 Larangan Makan dan Minum Sambil berdiri menurut Ustadz Abdul Shomad
             </Text>
 
-                <Video source={require('Z:/Lesson/ReactNative/GiftedChatWithChatkit/ayoayo/menu/kumpulananswer/video/LMB.mp4')}
+                <Video source={LaranganMB}
                        rate={1.0}
                        volume={1.0}
                        muted={false}
