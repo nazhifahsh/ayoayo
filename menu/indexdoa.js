@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, ScrollView, TouchableOpacity, ImageBackground } from 'react-native';
+import { StyleSheet, Text, View, ScrollView, TouchableOpacity, ImageBackground, Image } from 'react-native';
 import SearchInput, { createFilter } from 'react-native-search-filter';
 import emails from './doa';
+import icon from '../src/image/Cari.png'
+import {Icon} from 'react-native-vector-icons'
 import bgImage from '../src/image/deermount.jpg'
 const KEYS_TO_FILTERS = ['user.name', 'subject'];
  
@@ -25,8 +27,8 @@ export default class App extends Component {
         <SearchInput 
           onChangeText={(term) => { this.searchUpdated(term) }} 
           style={styles.searchInput}
-          placeholder="Type a message to search"
-          />
+          placeholder='Search Doa'
+        />
         <ScrollView>
           {filteredEmails.map(email => {
             return (
@@ -54,7 +56,7 @@ const styles = StyleSheet.create({
      height:null, 
   },
   emailItem:{
-    borderBottomWidth: 0.5,
+    borderBottomWidth: 1,
     borderColor: 'rgba(0,0,0,0.3)',
     padding: 10
   },
@@ -65,9 +67,9 @@ const styles = StyleSheet.create({
     padding: 10,
     borderColor: '#CCC',
     borderWidth: 1,
+    width: 310,
     backgroundColor:'#ffffff',
-    opacity:0.6,
-    width:300,
+    opacity:0.5,
     borderRadius:26,
   }
 });
