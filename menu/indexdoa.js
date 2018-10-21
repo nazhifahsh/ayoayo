@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, ScrollView, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, ScrollView, TouchableOpacity, ImageBackground } from 'react-native';
 import SearchInput, { createFilter } from 'react-native-search-filter';
 import emails from './doa';
+import bgImage from '../src/image/deermount.jpg'
 const KEYS_TO_FILTERS = ['user.name', 'subject'];
  
 export default class App extends Component {
@@ -17,7 +18,10 @@ export default class App extends Component {
   render() {
     const filteredEmails = emails.filter(createFilter(this.state.searchTerm, KEYS_TO_FILTERS))
     return (
-      <View style={styles.container}>
+      
+      <ImageBackground source={bgImage}
+      style={styles.backgroundContainer}>
+      <View >
         <SearchInput 
           onChangeText={(term) => { this.searchUpdated(term) }} 
           style={styles.searchInput}
@@ -36,15 +40,18 @@ export default class App extends Component {
           })}
         </ScrollView>
       </View>
+      </ImageBackground>
     );
   }
 }
  
 const styles = StyleSheet.create({
-  container: {
+  backgroundContainer: {
     flex: 1,
-    backgroundColor: '#fff',
-    justifyContent: 'flex-start'
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: null,
+     height:null, 
   },
   emailItem:{
     borderBottomWidth: 0.5,
@@ -57,6 +64,10 @@ const styles = StyleSheet.create({
   searchInput:{
     padding: 10,
     borderColor: '#CCC',
-    borderWidth: 1
+    borderWidth: 1,
+    backgroundColor:'#ffffff',
+    opacity:0.6,
+    width:300,
+    borderRadius:26,
   }
 });

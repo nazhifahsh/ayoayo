@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import { Text, StyleSheet, View,TouchableOpacity,Dimensions, ImageBackground,Image,   } from 'react-native'
-import bgImage from '../src/image/Wave.jpg'
+import bgImage from '../src/image/bluenight.jpg'
 import logo from '../src/image/Book3.png'
+import qna from '../src/image/QnAEdit.png'
 import icon1 from '../src/image/viewlist.png'
 import icon2 from '../src/image/bphone.png'
 
@@ -14,24 +15,30 @@ export default class Menu extends Component {
         style={styles.backgroundContainer}>
         <Image source={logo}
         style={styles.logo}/>
-        <Text style={styles.logoText}>
+        <Text style={styles.logoText}
+        style={{fontFamily:'Poppins-Light'}}>
         Nama Aplikasi</Text>
       <View style={{flexDirection:'row'}}>
                   <TouchableOpacity onPress={()=>this.props.navigation.navigate('Doa')}
           style={styles.touch} >
           <Image source={icon1}/>
-        <Text>Kumpulan Doa</Text>
+        <Text style={{fontFamily:'Good Unicorn - TTF', fontSize:20, marginTop:9}}>Kumpulan Doa</Text>
         </TouchableOpacity>
         <TouchableOpacity onPress={()=>this.props.navigation.navigate('Konsul')}
         style={styles.touch2}>
         <Image source={icon2}/>
-        <Text>Konsultasi Syariah</Text>
-        </TouchableOpacity>
-        <TouchableOpacity onPress={()=>this.props.navigation.navigate('QandA')}
-        style={styles.touch}>
-        <Text>Q&A</Text>
+        <Text style={{fontFamily:'Good Unicorn - TTF', fontSize:20, marginTop:9}}>Konsultasi Syariah</Text>
         </TouchableOpacity>
       </View>
+      <View style={{flexDirection:'column'}}>
+      <TouchableOpacity onPress={()=>this.props.navigation.navigate('Q&A')}
+      style={styles.QnA}>
+      <Image source={qna}/>
+      <Text  style={{fontFamily:'Good Unicorn - TTF', fontSize:20, marginTop:9}}>QnA</Text>
+      
+      </TouchableOpacity>
+      </View>
+      
       </ImageBackground>
     )
   }
@@ -103,4 +110,24 @@ touch2:{
   borderBottomColor:'#5974ce',
   shadowColor:'#000',
 },
+QnA:{
+  width:200,
+  height:100,
+  backgroundColor: '#56ff80',
+  shadowColor:'#000000',
+  shadowOffset:{width:3, height:8},
+  shadowOpacity:3,
+  shadowRadius:9,
+  borderRadius:14,
+  elevation: 20,
+  borderBottomWidth:6,
+  borderBottomEndRadius:6,
+  borderBottomStartRadius:6, 
+  borderBottomColor:'#38c55b',
+  shadowColor:'#000',
+  justifyContent: 'center',
+  alignItems:'center',
+  marginTop:20,
+  
+}
 })

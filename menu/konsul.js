@@ -16,7 +16,7 @@ export default class Konsul extends Component {
       <TouchableOpacity onPress={()=>this.props.navigation.navigate('UstAulia')}
           style={styles.touch}>
            <Image source={require('./male.png')} style={styles.mag}/>
-        <Text style={styles.tik}>Ustadz Aulia</Text>
+        <Text style={styles.tik}>Ustadz Auliya</Text>
         </TouchableOpacity>
         <TouchableOpacity onPress={()=>this.props.navigation.navigate('UstBurhan')}
           style={styles.touch}>
