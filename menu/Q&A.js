@@ -1,13 +1,13 @@
 export default class QnA  {
     constructor(props){
-        super(props);
+        
         this.state = {
             index:[{
                 user: 'Q1',
                 name: 'makan berdiri',
                 subject: 'Larangan makan berdiri'
-            }]
-        },
+            }
+        ,
         {
             user: 'Q2',
             name: 'minum berdiri',
@@ -22,7 +22,9 @@ export default class QnA  {
             user: 'Q4',
             name: 'setelah tidur',
             subject: 'Sunnah Rasul setelah tidur'
-        }
+        }]
+    
             
         }
     }
+}
