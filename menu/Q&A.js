@@ -1,4 +1,4 @@
-export default[
+export default class  {[
     {
         user: 'Q1',
         name: 'makan berdiri',
@@ -19,4 +19,4 @@ export default[
         name: 'setelah tidur',
         subject: 'Sunnah Rasul setelah tidur'
     }
-]
+]}
