@@ -4,6 +4,7 @@ import SearchInput, { createFilter } from 'react-native-search-filter';
 import doa from './doa';
 import bgImage from '../src/image/deermount.jpg'
 import icon from '../src/image/Cari.png'
+import  doadoaScreen from '../menu/doadoa'
 const cari = ['user.name', 'subject'];
  
 export default class App extends Component {
@@ -23,18 +24,18 @@ export default class App extends Component {
       <ImageBackground source={bgImage}
       style={styles.backgroundContainer}>
       <View >
-        
+        <View>
         <SearchInput 
-         Imagesource={icon}
          onChangeText={(term) => { this.searchUpdated(term) }} 
           style={styles.searchInput}
           placeholder="Type here to search"
           />
+          </View>
         <ScrollView>
           {filteredEmails.map(doa => {
             return (
               <TouchableOpacity onPress={()=>this.props.navigation.navigate('doadoa')} style={styles.emailItem}>
-                <View>]
+                <View>
                   <Text style={styles.emailSubject}>{doa.subject}</Text>
                 </View>
               </TouchableOpacity>
@@ -58,7 +59,9 @@ const styles = StyleSheet.create({
   emailItem:{
     borderBottomWidth: 1,
     borderColor: 'rgba(0,0,0,0.3)',
-    padding: 10
+    padding: 14,
+    
+    
   },
   emailSubject: {
     color: 'rgba(0,0,0,0.5)'
@@ -70,6 +73,7 @@ const styles = StyleSheet.create({
     width: 310,
     backgroundColor:'#ffffff',
     opacity:0.5,
+    marginTop:1,
     borderRadius:26,
   }
 });
