@@ -1,11 +1,8 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, ScrollView, TouchableOpacity, ImageBackground, Image } from 'react-native';
 import SearchInput, { createFilter } from 'react-native-search-filter';
-import emails from './doa';
-import icon from '../src/image/Cari.png'
-import {Icon} from 'react-native-vector-icons'
-import bgImage from '../src/image/deermount.jpg'
-const KEYS_TO_FILTERS = ['user.name', 'subject'];
+import doa from './doa';
+const cari = ['user.name', 'subject'];
  
 export default class App extends Component {
  constructor(props) {
@@ -18,7 +15,7 @@ export default class App extends Component {
     this.setState({ searchTerm: term })
   }
   render() {
-    const filteredEmails = emails.filter(createFilter(this.state.searchTerm, KEYS_TO_FILTERS))
+    const filteredEmails = doa.filter(createFilter(this.state.searchTerm, cari))
     return (
       
       <ImageBackground source={bgImage}
@@ -29,15 +26,16 @@ export default class App extends Component {
          Imagesource={icon}
          onChangeText={(term) => { this.searchUpdated(term) }} 
           style={styles.searchInput}
-          placeholder='Search Doa'
-        />
+          placeholder="Type here to search"
+          />
         <ScrollView>
-          {filteredEmails.map(email => {
+          {filteredEmails.map(doa => {
             return (
-              <TouchableOpacity onPress={()=>alert(email.user.name)} key={email.id} style={styles.emailItem}>
+              <TouchableOpacity onPress={()=>this.props.navigation.navigate('doadoa')} style={styles.emailItem}>
                 <View>
-                  <Text>{email.user.name}</Text>
-                  <Text style={styles.emailSubject}>{email.subject}</Text>
+                  <Text>{doa.user}</Text>
+                  <Text>{doa.name}</Text>
+                  <Text style={styles.emailSubject}>{doa.subject}</Text>
                 </View>
               </TouchableOpacity>
             )

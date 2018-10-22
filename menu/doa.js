@@ -1,4 +1,4 @@
-export default[
+export default [
     {
         user: 'doa1',
         name: 'makan',

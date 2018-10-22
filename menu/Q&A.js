@@ -1,6 +1,9 @@
-export default class QnA  {
+export default class QnA{
     constructor(props){
+<<<<<<< HEAD
+=======
         
+>>>>>>> 5ed93dede35c04b23fe388fe71415e6990200e97
         this.state = {
             index:[{
                 user: 'Q1',
