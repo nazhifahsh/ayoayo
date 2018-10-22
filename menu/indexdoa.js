@@ -24,8 +24,10 @@ export default class App extends Component {
       <ImageBackground source={bgImage}
       style={styles.backgroundContainer}>
       <View >
+        
         <SearchInput 
-          onChangeText={(term) => { this.searchUpdated(term) }} 
+         Imagesource={icon}
+         onChangeText={(term) => { this.searchUpdated(term) }} 
           style={styles.searchInput}
           placeholder='Search Doa'
         />
