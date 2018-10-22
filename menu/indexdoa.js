@@ -1,8 +1,16 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, ScrollView, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, ScrollView, TouchableOpacity, ImageBackground, Image } from 'react-native';
 import SearchInput, { createFilter } from 'react-native-search-filter';
+<<<<<<< HEAD
 import doa from './doa';
 const cari = ['user.name', 'subject'];
+=======
+import emails from './doa';
+import icon from '../src/image/Cari.png'
+import {Icon} from 'react-native-vector-icons'
+import bgImage from '../src/image/deermount.jpg'
+const KEYS_TO_FILTERS = ['user.name', 'subject'];
+>>>>>>> 5ed93dede35c04b23fe388fe71415e6990200e97
  
 export default class App extends Component {
  constructor(props) {
@@ -17,12 +25,20 @@ export default class App extends Component {
   render() {
     const filteredEmails = doa.filter(createFilter(this.state.searchTerm, cari))
     return (
-      <View style={styles.container}>
+      
+      <ImageBackground source={bgImage}
+      style={styles.backgroundContainer}>
+      <View >
         <SearchInput 
           onChangeText={(term) => { this.searchUpdated(term) }} 
           style={styles.searchInput}
+<<<<<<< HEAD
           placeholder="Type here to search"
           />
+=======
+          placeholder='Search Doa'
+        />
+>>>>>>> 5ed93dede35c04b23fe388fe71415e6990200e97
         <ScrollView>
           {filteredEmails.map(doa => {
             return (
@@ -37,18 +53,21 @@ export default class App extends Component {
           })}
         </ScrollView>
       </View>
+      </ImageBackground>
     );
   }
 }
  
 const styles = StyleSheet.create({
-  container: {
+  backgroundContainer: {
     flex: 1,
-    backgroundColor: '#fff',
-    justifyContent: 'flex-start'
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: null,
+     height:null, 
   },
   emailItem:{
-    borderBottomWidth: 0.5,
+    borderBottomWidth: 1,
     borderColor: 'rgba(0,0,0,0.3)',
     padding: 10
   },
@@ -58,6 +77,10 @@ const styles = StyleSheet.create({
   searchInput:{
     padding: 10,
     borderColor: '#CCC',
-    borderWidth: 1
+    borderWidth: 1,
+    width: 310,
+    backgroundColor:'#ffffff',
+    opacity:0.5,
+    borderRadius:26,
   }
 });
