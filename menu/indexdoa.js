@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { StyleSheet, Text, View, ScrollView, TouchableOpacity, ImageBackground, Image } from 'react-native';
 import SearchInput, { createFilter } from 'react-native-search-filter';
 import doa from './doa';
+import bgImage from '../src/image/deermount.jpg'
+import icon from '../src/image/Cari.png'
 const cari = ['user.name', 'subject'];
  
 export default class App extends Component {
@@ -32,9 +34,7 @@ export default class App extends Component {
           {filteredEmails.map(doa => {
             return (
               <TouchableOpacity onPress={()=>this.props.navigation.navigate('doadoa')} style={styles.emailItem}>
-                <View>
-                  <Text>{doa.user}</Text>
-                  <Text>{doa.name}</Text>
+                <View>]
                   <Text style={styles.emailSubject}>{doa.subject}</Text>
                 </View>
               </TouchableOpacity>
