@@ -2,9 +2,12 @@ import React, { Component } from 'react';
 import { StyleSheet, Text, View, ScrollView, TouchableOpacity, ImageBackground, Image } from 'react-native';
 import SearchInput, { createFilter } from 'react-native-search-filter';
 import doa from './doa';
+import bgImage from '../src/image/deermount.jpg'
+import icon from '../src/image/magnifier32.png'
+import  doadoaScreen from '../menu/doadoa'
 const cari = ['user.name', 'subject'];
  
-export default class App extends Component {
+export default class Doa extends Component {
  constructor(props) {
     super(props);
     this.state = {
@@ -21,20 +24,21 @@ export default class App extends Component {
       <ImageBackground source={bgImage}
       style={styles.backgroundContainer}>
       <View >
-        
+        <View style= {styles.SectionStyle}>
+        <Image source={icon} style={styles.ImageStyle} />
         <SearchInput 
-         Imagesource={icon}
          onChangeText={(term) => { this.searchUpdated(term) }} 
-          style={styles.searchInput}
+         
           placeholder="Type here to search"
-          />
+          >
+          </SearchInput>
+          
+          </View>
         <ScrollView>
           {filteredEmails.map(doa => {
             return (
               <TouchableOpacity onPress={()=>this.props.navigation.navigate('doadoa',{doa:doa.name})} style={styles.emailItem}>
                 <View>
-                  <Text>{doa.user}</Text>
-                  <Text>{doa.name}</Text>
                   <Text style={styles.emailSubject}>{doa.subject}</Text>
                 </View>
               </TouchableOpacity>
@@ -58,18 +62,47 @@ const styles = StyleSheet.create({
   emailItem:{
     borderBottomWidth: 1,
     borderColor: 'rgba(0,0,0,0.3)',
-    padding: 10
+    padding: 14,
+    
+    
   },
   emailSubject: {
     color: 'rgba(0,0,0,0.5)'
   },
+  SectionStyle: {
+    flexDirection: 'row',
+    justifyContent: 'flex-start',
+    alignItems: 'center',
+    backgroundColor: '#fff',
+    borderWidth: .5,
+    borderColor: '#000',
+    height: 40,
+    
+    opacity:0.5,
+    borderRadius: 26 ,
+    
+    margin: 10,
+    width:300
+},
   searchInput:{
+    
     padding: 10,
     borderColor: '#CCC',
     borderWidth: 1,
     width: 310,
     backgroundColor:'#ffffff',
     opacity:0.5,
+    marginTop:1,
     borderRadius:26,
-  }
+  },
+  
+ImageStyle: {
+  padding: 10,
+  margin: 5,
+  marginLeft:10,
+  height: 25,
+  width: 25,
+  position:'relative',
+  alignItems: 'center'
+},
 });
