@@ -31,7 +31,7 @@ export default class App extends Component {
         <ScrollView>
           {filteredEmails.map(doa => {
             return (
-              <TouchableOpacity onPress={()=>this.props.navigation.navigate('doadoa')} style={styles.emailItem}>
+              <TouchableOpacity onPress={()=>this.props.navigation.navigate('doadoa',{doa:doa.name})} style={styles.emailItem}>
                 <View>
                   <Text>{doa.user}</Text>
                   <Text>{doa.name}</Text>
