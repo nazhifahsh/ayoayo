@@ -1,12 +1,14 @@
 import React, {Component} from 'react';
 import {Text, View} from 'react-native';
-import doa from './doain';
+import Doa from './doa';
+import doa from './doa';
 export default class doadoa extends Component {
     render() {
         return (
            <View>
+               
                <Text>
-                   {doa.isiDoa}
+                   {doa.name}
                </Text>
            </View>
         );

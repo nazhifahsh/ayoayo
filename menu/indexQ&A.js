@@ -4,7 +4,7 @@ import SearchInput, { createFilter } from 'react-native-search-filter';
 import emails from './Q&A';
 const KEYS_TO_FILTERS = ['user.name', 'subject'];
  
-export default class App extends Component {
+export default class QnA extends Component {
  constructor(props) {
     super(props);
     this.state = {

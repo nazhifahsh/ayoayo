@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import { Text, StyleSheet, View,TouchableOpacity,Dimensions, ImageBackground,Image,   } from 'react-native'
 import bgImage from '../src/image/bluenight.jpg'
 import logo from '../src/image/Book3.png'
-import qna from '../src/image/QnAEdit.png'
-import icon1 from '../src/image/viewlist.png'
+import qna from '../src/image/question64.png'
+import icon1 from '../src/image/view-list64.png'
 import icon2 from '../src/image/bphone.png'
 
 
@@ -22,7 +22,7 @@ export default class Menu extends Component {
                   <TouchableOpacity onPress={()=>this.props.navigation.navigate('Doa')}
           style={styles.touch} >
           <Image source={icon1}/>
-        <Text style={{fontFamily:'Good Unicorn - TTF', fontSize:20, marginTop:9}}>Kumpulan Doa</Text>
+        <Text style={{fontFamily:'Good Unicorn - TTF', fontSize:20, marginTop:2}}>Kumpulan Doa</Text>
         </TouchableOpacity>
         <TouchableOpacity onPress={()=>this.props.navigation.navigate('Konsul')}
         style={styles.touch2}>
@@ -31,10 +31,10 @@ export default class Menu extends Component {
         </TouchableOpacity>
       </View>
       <View style={{flexDirection:'column'}}>
-      <TouchableOpacity onPress={()=>this.props.navigation.navigate('Q&A')}
+      <TouchableOpacity onPress={()=>this.props.navigation.navigate('indexQ&A')}
       style={styles.QnA}>
-      <Image source={qna}/>
-      <Text  style={{fontFamily:'Good Unicorn - TTF', fontSize:20, marginTop:9}}>QnA</Text>
+      <Image source={qna} style={{padding:5}}/>
+      <Text  style={{fontFamily:'Good Unicorn - TTF', fontSize:20, marginTop:2}}>QnA</Text>
       
       </TouchableOpacity>
       </View>
@@ -121,6 +121,7 @@ QnA:{
   borderRadius:14,
   elevation: 20,
   borderBottomWidth:6,
+  
   borderBottomEndRadius:6,
   borderBottomStartRadius:6, 
   borderBottomColor:'#38c55b',
