@@ -1,11 +1,42 @@
 import React, { Component } from 'react'
-import { Text, StyleSheet, View,Dimensions,TouchableOpacity, Image, ImageBackground} from 'react-native'
+import { Text, StyleSheet, View,Dimensions,TouchableOpacity, Image, ImageBackground, AppState} from 'react-native'
 import bgImage from '../src/image/Starsnight.jpg'
 import Logo from '../src/image/Book3.png'
-
+import PushController from './PushController'
+import PushNotification from 'react-native-push-notification'
 
 const {width: WIDTH}= Dimensions.get('window')
 export default class Splash extends Component {
+  constructor(props){
+    super(props);
+  
+    this.handleAppStateChange = this.handleAppStateChange.bind(this);
+    this.state={
+      seconds: 2
+    };
+  }
+
+  componentDidMount() {
+    AppState.addEventListener('change', this.handleAppStateChange);
+  }
+
+  componentWillUnmount() {
+    AppState.removeEventListener('change', this.handleAppStateChange);
+  }
+
+ 
+  handleAppStateChange(appState) {
+    if (appState === "background"){
+      let date = new Date(Date.now() + (this.state.seconds * 1000));
+
+      PushNotification.localNotificationSchedule({
+        message: "My Notification Message", 
+        date: new Date(Date.now() + (5 * 1000)) 
+      });
+      
+    
+    }
+  }
   render() {
     return (
       <ImageBackground style={styles.backgroundContainer}
@@ -15,8 +46,10 @@ export default class Splash extends Component {
           <TouchableOpacity onPress={()=>this.props.navigation.navigate('Menu')}>
         <Text style={{fontFamily:'Poppins-Light'}}> Tap to Continue </Text>
         </TouchableOpacity>
+        <PushController/>
       </View>
       </ImageBackground>
+    
     )
   }
 }
@@ -54,8 +87,8 @@ logoText:{
            marginBottom: 50
        },
        continue:{
-          width:WIDTH - 60,
-          height:45,
+          width:350,
+          height:80,
           borderRadius: 25,
           justifyContent: 'center',
           alignItems:'center',
