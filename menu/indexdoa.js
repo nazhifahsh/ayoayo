@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, ScrollView, TouchableOpacity, ImageBackground, Image } from 'react-native';
+import { StyleSheet,FlatList, Text, View, ScrollView, TouchableOpacity, ImageBackground, Image } from 'react-native';
 import SearchInput, { createFilter } from 'react-native-search-filter';
 import doa from './doa';
 import bgImage from '../src/image/deermount.jpg'
 import icon from '../src/image/magnifier32.png'
-import  doadoaScreen from '../menu/doadoa'
+import { ListItem } from 'react-native-elements';
 const cari = ['user.name', 'subject'];
  
 export default class Doa extends Component {
@@ -35,15 +35,16 @@ export default class Doa extends Component {
           
           </View>
         <ScrollView>
-          {filteredEmails.map(doa => {
-            return (
-              <TouchableOpacity onPress={()=>this.props.navigation.navigate('doadoa',{doa:doa.name})} style={styles.emailItem}>
-                <View>
-                  <Text style={styles.emailSubject}>{doa.subject}</Text>
-                </View>
-              </TouchableOpacity>
-            )
-          })}
+        {filteredEmails.map(doa => {
+          return(
+           <TouchableOpacity onPress={()=>this.props.navigation.navigate('doadoa',{name:doa.name})} style={styles.emailItem}>
+      <ListItem
+        title={doa.subject}
+      />   
+      </TouchableOpacity>
+
+        )})
+    }
         </ScrollView>
       </View>
       </ImageBackground>
