@@ -14,9 +14,28 @@ export default class Doa extends Component {
       searchTerm: ''
     }
   }
+  componentDidMount() {
+    AppState.addEventListener('change', this.handleAppStateChange);
+  }
+
+  componentWillUnmount() {
+    AppState.removeEventListener('change', this.handleAppStateChange);
+  }
+
   searchUpdated(term) {
     this.setState({ searchTerm: term })
   }
+  handleAppStateChange(appState) {
+    if (appState === 'background') {
+      PushNotification.localNotificationSchedule({
+      smallIcon: "ic_notification",
+      message: "Selamat, udah nunggu", 
+      date:new Date(Date.now()+(3 * 1000))
+      });
+    }
+  }
+
+
   render() {
     const filteredEmails = doa.filter(createFilter(this.state.searchTerm, cari))
     return (
