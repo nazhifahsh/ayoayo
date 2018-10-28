@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet,FlatList, Text, View, ScrollView, TouchableOpacity, ImageBackground, Image } from 'react-native';
+import { StyleSheet,FlatList, Text, View, ScrollView, TouchableOpacity, ImageBackground, Image, AppState } from 'react-native';
 import SearchInput, { createFilter } from 'react-native-search-filter';
 import doa from './doa';
 import bgImage from '../src/image/deermount.jpg'
@@ -59,6 +59,7 @@ export default class Doa extends Component {
            <TouchableOpacity onPress={()=>this.props.navigation.navigate('doadoa',{name:doa.name})} style={styles.emailItem}>
       <ListItem
         title={doa.subject}
+        style={styles.list}
       />   
       </TouchableOpacity>
 
@@ -86,6 +87,10 @@ const styles = StyleSheet.create({
     
     
   },
+  list:{
+      borderColor:'green'
+  }
+  ,
   emailSubject: {
     color: 'rgba(0,0,0,0.5)'
   },
