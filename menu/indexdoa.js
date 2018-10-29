@@ -60,6 +60,7 @@ export default class Doa extends Component {
            <TouchableOpacity onPress={()=>this.props.navigation.navigate('doadoa',{name:doa.name})} style={styles.emailItem}>
       <ListItem
         title={doa.subject}
+        style={styles.list}
       />   
       </TouchableOpacity>
 
@@ -87,6 +88,10 @@ const styles = StyleSheet.create({
     
     
   },
+  list:{
+      borderColor:'green'
+  }
+  ,
   emailSubject: {
     color: 'rgba(0,0,0,0.5)'
   },
