@@ -87,10 +87,6 @@ const styles = StyleSheet.create({
     
     
   },
-  list:{
-      borderColor:'green'
-  }
-  ,
   emailSubject: {
     color: 'rgba(0,0,0,0.5)'
   },

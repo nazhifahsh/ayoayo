@@ -27,12 +27,16 @@ export default class Splash extends Component {
  
   handleAppStateChange(appState) {
     if (appState === "background"){
-      let date = new Date(Date.now() + (5* 1000));
-
       PushNotification.localNotificationSchedule({
         smallIcon: "ic_notification",
         message: "Woy, berdoa", 
-        date: new Date(Date.now() + (5 * 1000)) 
+        date: new Date(Date.now() + (43200 * 1000)) ,
+        repeatType:'time',
+        repeatTime: (43200*1000), 
+        number:0,
+        userInfo: { id: new Date(Date.now()), },
+        
+        
       });
       
     
