@@ -6,6 +6,7 @@ import bgImage from '../src/image/deermount.jpg'
 import icon from '../src/image/magnifier32.png'
 import { ListItem } from 'react-native-elements';
 import PushNotification from 'react-native-push-notification';
+
 const cari = ['user.name', 'subject'];
  
 export default class Doa extends Component {
@@ -15,7 +16,9 @@ export default class Doa extends Component {
       searchTerm: ''
     }
   }
-  
+  searchUpdated(term) {
+    this.setState({ searchTerm: term })
+  }
 
   render() {
     const filteredEmails = doa.filter(createFilter(this.state.searchTerm, cari))

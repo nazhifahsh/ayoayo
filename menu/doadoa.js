@@ -58,15 +58,15 @@ export default class doadoa extends Component {
           <Text style={{marginTop:20}}> {JSON.stringify(latin)}</Text>
           <Text style={{marginTop:20}}> {JSON.stringify(arti)}</Text>
           <TouchableOpacity onPress={() =>SoundPlayer.playSoundFile('cant_take_my_eyes_off_you','mp3')}>
-     <Text>Play</Text>
+     <Image source={require('./play.png')}/>
       </TouchableOpacity>
       <TouchableOpacity
         onPress={() =>SoundPlayer.stop()} >
-        <Text>Stop</Text>
+        <Image source={require('./stop.png')}/>
     </TouchableOpacity>
     <TouchableOpacity
         onPress={() =>SoundPlayer.pause()} >
-        <Text>Pause</Text>
+        <Image source={require('./pause.png')}/>
     </TouchableOpacity>
     <TouchableOpacity
         onPress={() =>SoundPlayer.resume()} >
