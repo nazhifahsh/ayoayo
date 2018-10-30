@@ -10,6 +10,10 @@ const styles= StyleSheet.create({
         justifyContent:'center',
         alignItems:'center'
         
+    },
+    tombol:{
+      width:40,
+      height:40  
     }
 })
 
@@ -31,21 +35,23 @@ export default class doadoa extends Component {
           <Text> {JSON.stringify(isi)}</Text>
           <Text> {JSON.stringify(latin)}</Text>
           <Text> {JSON.stringify(arti)}</Text>
+          <View style={{flexDirection:'row'}}>
           <TouchableOpacity onPress={() =>SoundPlayer.playSoundFile('cant_take_my_eyes_off_you','mp3')}>
-     <Image source={require('./play.png')}/>
+     <Image source={require('./play.png')} style={styles.tombol}/>
       </TouchableOpacity>
       <TouchableOpacity
         onPress={() =>SoundPlayer.stop()} >
-        <Image source={require('./stop.png')}/>
+        <Image source={require('./stop.png')} style={styles.tombol}/>
     </TouchableOpacity>
     <TouchableOpacity
         onPress={() =>SoundPlayer.pause()} >
-        <Image source={require('./pause.png')}/>
+        <Image source={require('./pause.png')} style={styles.tombol}/>
     </TouchableOpacity>
     <TouchableOpacity
         onPress={() =>SoundPlayer.resume()} >
-        <Text>Resume</Text>
+        <Image source={require('./resume.jpg')} style={styles.tombol}/>
     </TouchableOpacity>
+    </View>
           
        </ScrollView>
         </View>
