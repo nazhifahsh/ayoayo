@@ -28,7 +28,7 @@ export default class Doa extends Component {
       style={styles.backgroundContainer}>
       <View >
         <View style= {styles.SectionStyle}>
-        <Image source={icon} style={styles.ImageStyle} />
+        <Image source={icon}/>
         <SearchInput 
          onChangeText={(term) => { this.searchUpdated(term) }} 
          
@@ -65,13 +65,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     width: null,
      height:null, 
-  },
-  emailItem:{
-    borderBottomWidth: 1,
-    
-    padding: 14,
-    
-    
   },
   emailSubject: {
     color: 'rgba(0,0,0,0.5)'
