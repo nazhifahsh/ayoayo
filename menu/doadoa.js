@@ -1,6 +1,6 @@
 
 import React, {Component} from 'react';
-import {StyleSheet, Text, View, TouchableOpacity, ScrollView, ImageBackground} from 'react-native';
+import {StyleSheet, Text, View, TouchableOpacity, ScrollView, Image,ImageBackground} from 'react-native';
 import doa from './doa';
 import bgImage from '../src/image/Greenbluegra.jpg'
 import SoundPlayer from 'react-native-sound-player'
@@ -35,6 +35,10 @@ const styles= StyleSheet.create({
         height:40,
         backgroundColor:'#0099c3'
 
+    },
+    tombol:{
+        width:40,
+        height:40
     }
 })
 
@@ -57,11 +61,12 @@ export default class doadoa extends Component {
           <Text style={{marginTop:20}}> {JSON.stringify(isi)}</Text>
           <Text style={{marginTop:20}}> {JSON.stringify(latin)}</Text>
           <Text style={{marginTop:20}}> {JSON.stringify(arti)}</Text>
+          <View style={{flexDirection:'row'}}>
           <TouchableOpacity onPress={() =>SoundPlayer.playSoundFile('cant_take_my_eyes_off_you','mp3')}>
      <Image source={require('./play.png')} style={styles.tombol}/>
       </TouchableOpacity>
       <TouchableOpacity
-        onPress={() =>SoundPlayer.stop()} >
+        onPress={() =>SoundPlayer.stop()}>
         <Image source={require('./stop.png')} style={styles.tombol}/>
     </TouchableOpacity>
     <TouchableOpacity
@@ -72,6 +77,7 @@ export default class doadoa extends Component {
         onPress={() =>SoundPlayer.resume()} >
         <Image source={require('./resume.jpg')} style={styles.tombol}/>
     </TouchableOpacity>
+    </View>
    
           
        </ScrollView>
