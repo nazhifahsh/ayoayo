@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Text, View} from 'react-native';
 import doa from './doa';
+import SoundPlayer from 'react-native-sound-player'
 export default class doadoa extends Component {
    
     render() {
@@ -9,6 +10,7 @@ export default class doadoa extends Component {
       const latin= params ? params.latin : null;
       const arti = params ? params.arti : null;
       const isi = params ? params.isi : null;
+
   
       return(
         <View>
@@ -16,6 +18,22 @@ export default class doadoa extends Component {
           <Text> {JSON.stringify(isi)}</Text>
           <Text> {JSON.stringify(latin)}</Text>
           <Text> {JSON.stringify(arti)}</Text>
+          <TouchableOpacity onPress={() =>SoundPlayer.playSoundFile('cant_take_my_eyes_off_you','mp3')}>
+     <Text>Play</Text>
+      </TouchableOpacity>
+      <TouchableOpacity
+        onPress={() =>SoundPlayer.stop()} >
+        <Text>Stop</Text>
+    </TouchableOpacity>
+    <TouchableOpacity
+        onPress={() =>SoundPlayer.pause()} >
+        <Text>Pause</Text>
+    </TouchableOpacity>
+    <TouchableOpacity
+        onPress={() =>SoundPlayer.resume()} >
+        <Text>Resume</Text>
+    </TouchableOpacity>
+          
        
         </View>
         
