@@ -30,9 +30,9 @@ export default class Splash extends Component {
       PushNotification.localNotificationSchedule({
         smallIcon: "ic_notification",
         message: "Ayo kita berdoa", 
-        date: new Date(Date.now() + (43200 * 1000)) ,
+        date: new Date(Date.now() + ( 39600* 1000)) ,
         repeatType:'time',
-        repeatTime: (43200*1000), 
+        repeatTime: (39600*1000), 
         number:0,
         userInfo: { id: new Date(Date.now()), },
         
