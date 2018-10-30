@@ -1,7 +1,19 @@
+
 import React, {Component} from 'react';
-import {Text, View} from 'react-native';
+import {StyleSheet, Text, View, TouchableOpacity, ScrollView} from 'react-native';
 import doa from './doa';
 import SoundPlayer from 'react-native-sound-player'
+
+const styles= StyleSheet.create({
+    dzikir:{
+        backgroundColor:'#52cff2',
+        justifyContent:'center',
+        alignItems:'center'
+        
+    }
+})
+
+
 export default class doadoa extends Component {
    
     render() {
@@ -14,7 +26,8 @@ export default class doadoa extends Component {
   
       return(
         <View>
-          <Text> {JSON.stringify(subject)}</Text>
+            <ScrollView>
+          <Text style={styles.dzikir}> {JSON.stringify(subject)}</Text>
           <Text> {JSON.stringify(isi)}</Text>
           <Text> {JSON.stringify(latin)}</Text>
           <Text> {JSON.stringify(arti)}</Text>
@@ -34,7 +47,7 @@ export default class doadoa extends Component {
         <Text>Resume</Text>
     </TouchableOpacity>
           
-       
+       </ScrollView>
         </View>
         
         );
