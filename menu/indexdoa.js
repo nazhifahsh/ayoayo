@@ -37,7 +37,8 @@ export default class Doa extends Component {
         <ScrollView>
         {filteredEmails.map(doa => {
           return(
-           <TouchableOpacity onPress={()=>this.props.navigation.navigate('doadoa',{ subject:doa.subject,isi:doa.isi, latin:doa.latin, arti:doa.arti})} style={styles.emailItem}>
+           <TouchableOpacity onPress={()=>this.props.navigation.navigate('doadoa',{ subject:doa.subject,isi:doa.isi, latin:doa.latin, arti:doa.arti})} 
+           style={styles.emailItem}>
       <ListItem
         title={doa.subject}
         style={styles.list}
@@ -64,7 +65,7 @@ const styles = StyleSheet.create({
   },
   emailItem:{
     borderBottomWidth: 1,
-    borderColor: 'rgba(0,0,0,0.3)',
+    
     padding: 14,
     
     
