@@ -1,6 +1,6 @@
 
 import React, {Component} from 'react';
-import {StyleSheet, Text, View, TouchableOpacity, ScrollView} from 'react-native';
+import {StyleSheet, Text, View, TouchableOpacity,Image, ScrollView} from 'react-native';
 import doa from './doa';
 import SoundPlayer from 'react-native-sound-player'
 
@@ -32,15 +32,15 @@ export default class doadoa extends Component {
           <Text> {JSON.stringify(latin)}</Text>
           <Text> {JSON.stringify(arti)}</Text>
           <TouchableOpacity onPress={() =>SoundPlayer.playSoundFile('cant_take_my_eyes_off_you','mp3')}>
-     <Text>Play</Text>
+     <Image source={require('./play.png')}/>
       </TouchableOpacity>
       <TouchableOpacity
         onPress={() =>SoundPlayer.stop()} >
-        <Text>Stop</Text>
+        <Image source={require('./stop.png')}/>
     </TouchableOpacity>
     <TouchableOpacity
         onPress={() =>SoundPlayer.pause()} >
-        <Text>Pause</Text>
+        <Image source={require('./pause.png')}/>
     </TouchableOpacity>
     <TouchableOpacity
         onPress={() =>SoundPlayer.resume()} >
