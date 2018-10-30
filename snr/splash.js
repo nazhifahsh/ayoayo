@@ -29,7 +29,7 @@ export default class Splash extends Component {
     if (appState === "background"){
       PushNotification.localNotificationSchedule({
         smallIcon: "ic_notification",
-        message: "Woy, berdoa", 
+        message: "Ayo kita berdoa", 
         date: new Date(Date.now() + (43200 * 1000)) ,
         repeatType:'time',
         repeatTime: (43200*1000), 
