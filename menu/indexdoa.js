@@ -37,11 +37,12 @@ export default class Doa extends Component {
         <ScrollView>
         {filteredEmails.map(doa => {
           return(
-           <TouchableOpacity onPress={()=>this.props.navigation.navigate('doadoa',{name:doa.name})} style={styles.emailItem}>
+           <TouchableOpacity onPress={()=>this.props.navigation.navigate('doadoa',{ subject:doa.subject,isi:doa.isi, latin:doa.latin, arti:doa.arti})} style={styles.emailItem}>
       <ListItem
         title={doa.subject}
         style={styles.list}
-      />   
+      />
+      
       </TouchableOpacity>
 
         )})
