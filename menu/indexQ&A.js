@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { StyleSheet, Text, View, ScrollView, TouchableOpacity, Image, ImageBackground} from 'react-native';
 import {ListItem} from 'react-native-elements';
 import SearchInput, { createFilter } from 'react-native-search-filter';
+import 'react-native-video';
 import emails from './IsiQnA';
 import icon from '../src/image/magnifier32.png'
 import bgImage from '../src/image/Purple.jpg'

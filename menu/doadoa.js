@@ -1,6 +1,6 @@
 
 import React, {Component} from 'react';
-import {StyleSheet, Text, View, TouchableOpacity, ScrollView, Image,ImageBackground} from 'react-native';
+import {StyleSheet, Text, View, TouchableOpacity, ScrollView, Image} from 'react-native';
 import doa from './doa';
 import bgImage from '../src/image/bluesky.jpg'
 import SoundPlayer from 'react-native-sound-player'
@@ -12,7 +12,8 @@ const styles= StyleSheet.create({
         alignItems: 'center',
         width: null,
          height:null,
-         padding:10
+         padding:10,
+         backgroundColor:'#2E846E'
 
     },
     dzikir:{
@@ -20,11 +21,16 @@ const styles= StyleSheet.create({
         width:'80%',
         alignSelf:'center',
         textAlignVertical:'center',
-        fontSize:20,  
-        backgroundColor:'#048abf',
+        fontSize:30,  
+        backgroundColor:'#64857C',
         justifyContent: 'center',
         alignItems:'center',
         textAlign:'center',
+        height:70,
+        marginBottom:20,
+        fontFamily:'AsparagusSprouts',
+        borderRadius:8
+      
         
         
     },
@@ -50,7 +56,7 @@ const styles= StyleSheet.create({
     },
     audio:{
         flexDirection:'row',
-        backgroundColor:'#37D0A9',
+        backgroundColor:'#3FD4AB',
         borderRadius:15,
         alignItems:'center',
         justifyContent:'center',
@@ -70,7 +76,6 @@ export default class doadoa extends Component {
 
   
       return(
-    <ImageBackground source={bgImage}style={styles.container}>
         <View style={styles.container}>
             <ScrollView>
             <View style={styles.audio}>
@@ -99,7 +104,6 @@ export default class doadoa extends Component {
           
        </ScrollView>
         </View>
-    </ImageBackground>
         );
       }
     }
