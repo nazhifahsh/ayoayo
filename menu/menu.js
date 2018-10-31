@@ -31,7 +31,7 @@ export default class Menu extends Component {
         </TouchableOpacity>
       </View>
       <View style={{flexDirection:'column'}}>
-      <TouchableOpacity onPress={()=>this.props.navigation.navigate('indexQ&A')}
+      <TouchableOpacity onPress={()=>this.props.navigation.navigate('QandA')}
       style={styles.QnA}>
       <Image source={qna} style={{padding:5}}/>
       <Text  style={{fontFamily:'Good Unicorn - TTF', fontSize:20, marginTop:2}}>QnA</Text>
