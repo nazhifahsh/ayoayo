@@ -15,18 +15,9 @@ const styles= StyleSheet.create({
 
     },
     dzikir:{
-        marginTop:10,
-        width:'80%',
-        alignSelf:'center',
-        textAlignVertical:'center',
-       fontSize:20,  
-        backgroundColor:'#048abf',
-        justifyContent: 'center',
-        alignItems:'center',
+        fontSize:20,
+        width:'90%',
         textAlign:'center',
-        height:70,
-        marginBottom:20,
-      
         
         
     },
@@ -42,7 +33,12 @@ const styles= StyleSheet.create({
     tombol:{
         width:40,
         height:40
-    }
+    },
+    tombol4m:{
+        width:40,
+        height:40,
+        borderRadius:20
+    },
 })
 
 
@@ -60,7 +56,7 @@ export default class doadoa extends Component {
     <ImageBackground source={bgImage}style={styles.container}>
         <View style={styles.container}>
             <ScrollView>
-          <Text style={styles.dzikir}> {JSON.stringify(subject)}</Text>
+          <Text style={styles.dzikir} > {JSON.stringify(subject)}</Text>
           <Text style={{marginTop:20, fontSize:30}}> {JSON.stringify(isi)}</Text>
           <Text style={{marginTop:20}}> {JSON.stringify(latin)}</Text>
           <Text style={{marginTop:20}}> {JSON.stringify(arti)}</Text>
