@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, ScrollView, TouchableOpacity } from 'react-native';
 import SearchInput, { createFilter } from 'react-native-search-filter';
+import 'react-native-video';
 import emails from './IsiQnA';
 const KEYS_TO_FILTERS = ['user.name', 'subject'];
  

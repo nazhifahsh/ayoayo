@@ -32,6 +32,7 @@ export default class Splash extends Component {
         message: "Ayo Berdoa", 
         date: new Date(Date.now() + (660*1000)) ,
         repeatType:'day',
+        
         number:0,
         userInfo: { id: new Date(Date.now()), },
         
