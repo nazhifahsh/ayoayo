@@ -2,7 +2,7 @@
 import React, {Component} from 'react';
 import {StyleSheet, Text, View, TouchableOpacity, ScrollView, Image,ImageBackground} from 'react-native';
 import doa from './doa';
-import bgImage from '../src/image/Greenbluegra.jpg'
+import bgImage from '../src/image/bluesky.jpg'
 import SoundPlayer from 'react-native-sound-player'
 
 const styles= StyleSheet.create({
@@ -15,15 +15,18 @@ const styles= StyleSheet.create({
 
     },
     dzikir:{
-       fontSize:20,
-       marginTop:20,
-       borderBottomWidth:2,
-       borderTopColor:'black',
+        marginTop:10,
+        width:'80%',
+        alignSelf:'center',
+        textAlignVertical:'center',
+       fontSize:20,  
+        backgroundColor:'#048abf',
         justifyContent: 'center',
-        alignItems:'baseline',
+        alignItems:'center',
         textAlign:'center',
-        width:'100%',
-        height:50,
+        height:70,
+        marginBottom:20,
+      
         
         
     },
@@ -58,7 +61,7 @@ export default class doadoa extends Component {
         <View style={styles.container}>
             <ScrollView>
           <Text style={styles.dzikir}> {JSON.stringify(subject)}</Text>
-          <Text style={{marginTop:20}}> {JSON.stringify(isi)}</Text>
+          <Text style={{marginTop:20, fontSize:30}}> {JSON.stringify(isi)}</Text>
           <Text style={{marginTop:20}}> {JSON.stringify(latin)}</Text>
           <Text style={{marginTop:20}}> {JSON.stringify(arti)}</Text>
           <View style={{flexDirection:'row'}}>
@@ -75,7 +78,7 @@ export default class doadoa extends Component {
     </TouchableOpacity>
     <TouchableOpacity
         onPress={() =>SoundPlayer.resume()} >
-        <Image source={require('./resume.jpg')} style={styles.tombol}/>
+        <Image source={require('./resume.jpg')} style={styles.tombol4}/>
     </TouchableOpacity>
     </View>
    
