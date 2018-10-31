@@ -39,7 +39,7 @@ const styles= StyleSheet.create({
     },
     tombol:{
         width:40,
-        height:40,
+        height:40, 
         marginLeft:20
     
     },
