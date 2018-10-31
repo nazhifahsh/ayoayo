@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, ScrollView, TouchableOpacity } from 'react-native';
 import SearchInput, { createFilter } from 'react-native-search-filter';
-import emails from './Q&A';
+import emails from './IsiQnA';
 const KEYS_TO_FILTERS = ['user.name', 'subject'];
  
 export default class QnA extends Component {
@@ -26,9 +26,9 @@ export default class QnA extends Component {
         <ScrollView>
           {filteredEmails.map(email => {
             return (
-              <TouchableOpacity onPress={()=>alert(email.user.name)} key={email.id} style={styles.emailItem}>
+              <TouchableOpacity onPress={()=>this.props.navigation.navigate('LMB')} key={email.id} style={styles.emailItem}>
                 <View>
-                  <Text>{email.user.name}</Text>
+                  <Text>{email.user}</Text>
                   <Text style={styles.emailSubject}>{email.subject}</Text>
                 </View>
               </TouchableOpacity>

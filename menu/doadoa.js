@@ -12,11 +12,18 @@ const styles= StyleSheet.create({
         alignItems: 'center',
         width: null,
          height:null,
+         padding:10
 
     },
     dzikir:{
-        fontSize:20,
-        width:'90%',
+        marginTop:10,
+        width:'80%',
+        alignSelf:'center',
+        textAlignVertical:'center',
+        fontSize:20,  
+        backgroundColor:'#048abf',
+        justifyContent: 'center',
+        alignItems:'center',
         textAlign:'center',
         
         
@@ -32,13 +39,23 @@ const styles= StyleSheet.create({
     },
     tombol:{
         width:40,
-        height:40
-    },
-    tombol4m:{
-        width:40,
         height:40,
-        borderRadius:20
+        marginLeft:20
+    
     },
+    arab:{
+        marginTop:20,
+        fontSize:20,
+        textAlign:'center'
+    },
+    audio:{
+        flexDirection:'row',
+        backgroundColor:'#37D0A9',
+        borderRadius:15,
+        alignItems:'center',
+        justifyContent:'center',
+        height: 50
+    }
 })
 
 
@@ -56,11 +73,7 @@ export default class doadoa extends Component {
     <ImageBackground source={bgImage}style={styles.container}>
         <View style={styles.container}>
             <ScrollView>
-          <Text style={styles.dzikir} > {JSON.stringify(subject)}</Text>
-          <Text style={{marginTop:20, fontSize:30}}> {JSON.stringify(isi)}</Text>
-          <Text style={{marginTop:20}}> {JSON.stringify(latin)}</Text>
-          <Text style={{marginTop:20}}> {JSON.stringify(arti)}</Text>
-          <View style={{flexDirection:'row'}}>
+            <View style={styles.audio}>
           <TouchableOpacity onPress={() =>SoundPlayer.playSoundFile('cant_take_my_eyes_off_you','mp3')}>
      <Image source={require('./play.png')} style={styles.tombol}/>
       </TouchableOpacity>
@@ -74,9 +87,14 @@ export default class doadoa extends Component {
     </TouchableOpacity>
     <TouchableOpacity
         onPress={() =>SoundPlayer.resume()} >
-        <Image source={require('./resume.jpg')} style={styles.tombol4}/>
+        <Image source={require('./pp.png')} style={styles.tombol}/>
     </TouchableOpacity>
     </View>
+          <Text style={styles.dzikir}> {JSON.stringify(subject)}</Text>
+          <Text style={styles.arab}> {JSON.stringify(isi)}</Text>
+          <Text style={{marginTop:20}}> {JSON.stringify(latin)}</Text>
+          <Text style={{marginTop:20}}> {JSON.stringify(arti)}</Text>
+         
    
           
        </ScrollView>
