@@ -16,7 +16,7 @@ export default class LMB extends Component {
                 Larangan Makan dan Minum Sambil berdiri menurut Ustadz Abdul Shomad
             </Text>
 
-                <Video source={require('./video/1.mp4')}
+                <Video source={subject}
                        rate={1.0}
                        volume={1.0}
                        muted={false}
@@ -26,7 +26,7 @@ export default class LMB extends Component {
                        onback={() => null}
                        shouldPlay
                        resizeMode=""
-                       style={{  width ,height: 300 }}
+                       style={{  width:'100%' ,height: 300 }}
                 />
 
                 <View style={styles.controlBar}></View>
