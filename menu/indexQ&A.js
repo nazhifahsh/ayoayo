@@ -39,7 +39,7 @@ export default class QandA extends Component {
               <TouchableOpacity onPress={()=>this.props.navigation.navigate('LMB')}
                key={email.id} style={styles.emailItem}>
                <ListItem
-        title={doa.subject}
+        title={emails.subject}
         style={styles.list}
       />
               </TouchableOpacity>
