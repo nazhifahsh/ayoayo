@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, ScrollView, TouchableOpacity, Image, ImageBackground} from 'react-native';
-import {ListItem} from 'react-native-elements';
 import SearchInput, { createFilter } from 'react-native-search-filter';
-import 'react-native-video';
 import emails from './IsiQnA';
 import icon from '../src/image/magnifier32.png'
 import bgImage from '../src/image/Purple.jpg'
@@ -24,7 +22,7 @@ export default class QnA extends Component {
     return (
       <ImageBackground source={bgImage}style={styles.container}>
       <View>
-        <View style={styles.SectionStyle}>
+        <View style={styles.Se}>
        <Image source={icon} style={{marginStart:10}}/>
         <SearchInput 
           onChangeText={(term) => { this.searchUpdated(term) }} 
@@ -36,12 +34,11 @@ export default class QnA extends Component {
           
           {filteredEmails.map(email => {
             return (
-              <TouchableOpacity onPress={()=>this.props.navigation.navigate('LMB')}
-               key={email.id} style={styles.emailItem}>
-               <ListItem
-        title={doa.subject}
-        style={styles.list}
-      />
+              <TouchableOpacity onPress={()=>this.props.navigation.navigate('LMB')} key={email.id} style={styles.emailItem}>
+                <View>
+                  <Text>{email.user}</Text>
+                  <Text style={styles.emailSubject}>{email.subject}</Text>
+                </View>
               </TouchableOpacity>
             )
           })}
