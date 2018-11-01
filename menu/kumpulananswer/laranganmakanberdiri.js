@@ -16,7 +16,7 @@ export default class LMB extends Component {
                 Larangan Makan dan Minum Sambil berdiri menurut Ustadz Abdul Shomad
             </Text>
 
-                <Video source={JSON.stringify(subject)}
+                <Video source={require('./video/1.mp4')}
                        rate={1.0}
                        volume={1.0}
                        muted={false}
