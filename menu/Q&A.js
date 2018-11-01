@@ -1,29 +1,23 @@
-export default class QnA{
-    constructor(props){
-        this.state = {
-            index:[{
-                user: 'Q1',
-                name: 'makan berdiri',
-                subject: 'Larangan makan berdiri'
-            }
-        ,
-        {
-            user: 'Q2',
-            name: 'minum berdiri',
-            subject: 'Larangan minum berdiri'
-        },
-        {
-            user: 'Q3',
-            name: 'sebelum tidur',
-            subject: 'Sunnah Rasul sebelum tidur'
-        },
-        {
-            user: 'Q4',
-            name: 'setelah tidur',
-            subject: 'Sunnah Rasul setelah tidur'
-        }]
-    
-            
-        }
+import {Component} from 'react';
+import {View, Text, StyleSheet, } from 'react-native';
+import QnA from './IsiQnA'
+
+
+export default class LMB extends Component {
+   
+    render() {
+      const { params } = this.props.navigation.state;
+      const isi = params ? params.isi : null;
+      const subject = params ? params.subject:null;
+
+
+  
+      return(
+          <View>
+              <Text> {JSON.stringify(isi)}</Text>
+
+          </View>
+
+      )
     }
-}
+    }

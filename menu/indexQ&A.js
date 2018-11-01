@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, ScrollView, TouchableOpacity, Image, ImageBackground} from 'react-native';
+import { StyleSheet, Text, View, ScrollView, TouchableOpacity,ActivityIndicator, Image, ImageBackground} from 'react-native';
 import SearchInput, { createFilter } from 'react-native-search-filter';
 import emails from './IsiQnA';
 import icon from '../src/image/magnifier32.png'
@@ -23,7 +23,7 @@ export default class QandA extends Component {
     return (
       <ImageBackground source={bgImage}style={styles.container}>
       <View>
-        <View style={styles.Se}>
+        <View style= {styles.SectionStyle}>
        <Image source={icon} style={{marginStart:10}}/>
         <SearchInput 
           onChangeText={(term) => { this.searchUpdated(term) }} 
@@ -35,7 +35,8 @@ export default class QandA extends Component {
           
           {filteredEmails.map(email => {
             return (
-              <TouchableOpacity onPress={()=>this.props.navigation.navigate('LMB',{subject:email.subject, isi:email.isi})} style={styles.emailItem}>
+              <TouchableOpacity onPress={()=>this.props.navigation.navigate('LMB',{subject:email.subject, isi:email.isi})}
+               style={styles.emailItem}>
                <ListItem
         title={email.name}
         style={styles.list}
@@ -43,8 +44,11 @@ export default class QandA extends Component {
               </TouchableOpacity>
             )
           })}
+          
         </ScrollView>
       </View>
+      
+      <ActivityIndicator/>
       </ImageBackground>
     );
   }
@@ -67,11 +71,10 @@ const styles = StyleSheet.create({
     opacity:0.5,
     borderRadius: 26 ,   
     margin: 10,
-    width:300
+    width:'90%'
 },
   emailItem:{
-    borderBottomWidth: 0.5,
-    borderColor: 'rgba(0,0,0,0.3)',
+    
     padding: 10
   },
   emailSubject: {

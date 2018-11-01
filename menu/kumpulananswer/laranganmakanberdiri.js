@@ -13,7 +13,7 @@ export default class LMB extends Component {
       const isi = params ? params.isi :null;
         return (
             <View style={styles.container}>
-            <Text>
+            <Text style={styles.judul}>
                {isi}
             </Text>
 
@@ -27,10 +27,9 @@ export default class LMB extends Component {
                        onback={() => null}
                        shouldPlay
                        resizeMode=""
-                       style={{  width:'100%' ,height: 300 }}
+                       style={{  width:'100%' ,height: 390, }}
                 />
 
-                <View style={styles.controlBar}></View>
 
             </View>
         );
@@ -41,6 +40,23 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         flex:1,
+        backgroundColor:'#04c6b2',
+        width:null,
+        height:null
+    },
+    judul:{
+        fontFamily:'Quite Magical - TTF',
+        fontSize:30,
+        width:'75%',
+        justifyContent:'center',
+        textAlign:'center',
+        height:100,
+        backgroundColor:'#0074b8',
+        textAlignVertical:'center',
+        borderRadius:20,
+        alignItems:'center',
+
+        
     },
     video:{
         position: 'absolute',
