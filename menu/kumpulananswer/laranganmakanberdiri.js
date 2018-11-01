@@ -26,7 +26,7 @@ export default class LMB extends Component {
                        onback={() => null}
                        shouldPlay
                        resizeMode=""
-                       style={{  width:'100%' ,height: 300 }}
+                       style={{  width ,height: 300 }}
                 />
 
                 <View style={styles.controlBar}></View>

@@ -3,6 +3,7 @@ package com.ayoayo;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.brentvatne.react.ReactVideoPackage;
 import rnsoundplayer.RNSoundPlayerPackage;
 import com.dieam.reactnativepushnotification.ReactNativePushNotificationPackage;
 import com.oblador.vectoricons.VectorIconsPackage;
@@ -28,7 +29,8 @@ public class MainApplication extends Application implements ReactApplication {
           new MainReactPackage(),
             new RNSoundPlayerPackage(),
             new ReactNativePushNotificationPackage(),
-            new VectorIconsPackage()
+            new VectorIconsPackage(),
+            new ReactVideoPackage()
       );
     }
 
