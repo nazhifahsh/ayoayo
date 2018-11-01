@@ -10,10 +10,11 @@ export default class LMB extends Component {
     render() {
         const { params } = this.props.navigation.state;
       const subject = params ? params.subject : null;
+      const isi = params ? params.isi :null;
         return (
             <View style={styles.container}>
             <Text>
-                Larangan Makan dan Minum Sambil berdiri menurut Ustadz Abdul Shomad
+               {isi}
             </Text>
 
                 <Video source={subject}
