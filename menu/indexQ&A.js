@@ -36,10 +36,9 @@ export default class QandA extends Component {
           
           {filteredEmails.map(email => {
             return (
-              <TouchableOpacity onPress={()=>this.props.navigation.navigate('LMB')}
-               key={email.id} style={styles.emailItem}>
+              <TouchableOpacity onPress={()=>this.props.navigation.navigate('LMB')} style={styles.emailItem}>
                <ListItem
-        title={emails.subject}
+        title={email.name}
         style={styles.list}
       />
               </TouchableOpacity>
