@@ -28,7 +28,7 @@ export default class Doa extends Component {
       style={styles.backgroundContainer}>
       <View >
         <View style= {styles.SectionStyle}>
-        <Image source={icon}/>
+        <Image source={icon} style={{marginStart:10}}/>
         <SearchInput 
          onChangeText={(term) => { this.searchUpdated(term) }} 
          
