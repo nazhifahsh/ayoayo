@@ -8,13 +8,16 @@ export default class LMB extends Component {
         title: 'Larangan Makan Berdiri',
     };
     render() {
+        const { params } = this.props.navigation.state;
+      const subject = params ? params.subject : null;
+      const isi = params ? params.isi :null;
         return (
             <View style={styles.container}>
             <Text>
-                Larangan Makan dan Minum Sambil berdiri menurut Ustadz Abdul Shomad
+               {isi}
             </Text>
 
-                <Video source={require('./video/LMB.mp4')}
+                <Video source={subject}
                        rate={1.0}
                        volume={1.0}
                        muted={false}

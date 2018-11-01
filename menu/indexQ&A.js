@@ -5,9 +5,9 @@ import emails from './IsiQnA';
 import icon from '../src/image/magnifier32.png'
 import bgImage from '../src/image/Purple.jpg'
 
-const KEYS_TO_FILTERS = ['user.name', 'subject'];
+const KEYS_TO_FILTERS = ['name'];
  
-export default class QnA extends Component {
+export default class QandA extends Component {
  constructor(props) {
     super(props);
     this.state = {
@@ -34,11 +34,11 @@ export default class QnA extends Component {
           
           {filteredEmails.map(email => {
             return (
-              <TouchableOpacity onPress={()=>this.props.navigation.navigate('LMB')} key={email.id} style={styles.emailItem}>
-                <View>
-                  <Text>{email.user}</Text>
-                  <Text style={styles.emailSubject}>{email.subject}</Text>
-                </View>
+              <TouchableOpacity onPress={()=>this.props.navigation.navigate('LMB',{subject:email.subject, isi:email.isi})} style={styles.emailItem}>
+               <ListItem
+        title={email.name}
+        style={styles.list}
+      />
               </TouchableOpacity>
             )
           })}
