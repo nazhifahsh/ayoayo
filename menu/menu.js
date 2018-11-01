@@ -30,6 +30,13 @@ export default class Menu extends Component {
         <Text style={{fontFamily:'Good Unicorn - TTF', fontSize:20, marginTop:9}}>Konsultasi Syariah</Text>
         </TouchableOpacity>
       </View>
+      <View style={{flexDirection:'column'}}>
+        <TouchableOpacity  onPress={()=>this.props.navigation.navigate('QandA')}
+        style={styles.QnA}>
+        <Image source={qna}/>
+        <Text style={{fontFamily:'Good Unicorn - TTF', fontSize:20, marginTop:9}}>Q n A</Text>
+        </TouchableOpacity>
+        </View>
       
       </ImageBackground>
     )

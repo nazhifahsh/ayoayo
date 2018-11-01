@@ -3,9 +3,9 @@ import { StyleSheet, Text, View, ScrollView, TouchableOpacity } from 'react-nati
 import SearchInput, { createFilter } from 'react-native-search-filter';
 import 'react-native-video';
 import emails from './IsiQnA';
-const KEYS_TO_FILTERS = ['user.name', 'subject'];
+const KEYS_TO_FILTERS = ['name'];
  
-export default class QnA extends Component {
+export default class QandA extends Component {
  constructor(props) {
     super(props);
     this.state = {
@@ -29,8 +29,7 @@ export default class QnA extends Component {
             return (
               <TouchableOpacity onPress={()=>this.props.navigation.navigate('LMB')} key={email.id} style={styles.emailItem}>
                 <View>
-                  <Text>{email.user}</Text>
-                  <Text style={styles.emailSubject}>{email.subject}</Text>
+                  <Text>{email.name}</Text>
                 </View>
               </TouchableOpacity>
             )
