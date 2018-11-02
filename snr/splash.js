@@ -30,7 +30,7 @@ export default class Splash extends Component {
       PushNotification.localNotificationSchedule({
         smallIcon: "ic_notification",
         message: "Ayo Berdoa", 
-        date: new Date(Date.now() + (660*1000)) ,
+        date: new Date(Date.now() + (990*1000)) ,
         repeatType:'day',
         
         number:0,
