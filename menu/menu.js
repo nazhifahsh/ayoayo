@@ -16,8 +16,8 @@ export default class Menu extends Component {
         <Image source={logo}
         style={styles.logo}/>
         <Text style={styles.logoText}
-        style={{fontFamily:'Poppins-Light'}}>
-        Nama Aplikasi</Text>
+        style={{fontFamily:'Poppins-Light', fontSize:30}}>
+        Lets Pray</Text>
       <View style={{flexDirection:'row'}}>
                   <TouchableOpacity onPress={()=>this.props.navigation.navigate('Doa')}
           style={styles.touch} >
