@@ -27,7 +27,7 @@ export default class LMB extends Component {
                        onback={() => null}
                        shouldPlay
                        resizeMode=""
-                       style={{  width:'100%' ,height: 390, }}
+                       style={{  width:'100%' ,height: 300, }}
                 />
 
 
@@ -55,6 +55,7 @@ const styles = StyleSheet.create({
         textAlignVertical:'center',
         borderRadius:20,
         alignItems:'center',
+        marginBottom:10
 
         
     },
