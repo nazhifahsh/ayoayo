@@ -109,6 +109,12 @@
 		<string>Octicons.ttf</string>
 		<string>SimpleLineIcons.ttf</string>
 		<string>Zocial.ttf</string>
+		<string>Mothanna-Bold-Oblique.ttf</string>
+		<string>Mothanna-Bold.ttf</string>
+		<string>Mothanna-Oblique.ttf</string>
+		<string>Mothanna.ttf</string>
+		<string>DroidKufi-Bold.ttf</string>
+		<string>DroidKufi-Regular.ttf</string>
 	</array>
 </dict>
 </plist>

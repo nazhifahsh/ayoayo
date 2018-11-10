@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { StyleSheet, View, ScrollView, TouchableOpacity, ImageBackground, Image, } from 'react-native';
 import SearchInput, { createFilter } from 'react-native-search-filter';
 import doa from './doa';
-import bgImage from '../src/image/deermount.jpg'
+import bgImage from '../src/image/w1.jpg'
 import icon from '../src/image/magnifier32.png'
 import { ListItem } from 'react-native-elements';
 import PushNotification from 'react-native-push-notification';

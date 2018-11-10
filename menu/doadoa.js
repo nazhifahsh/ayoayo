@@ -46,27 +46,36 @@ const styles= StyleSheet.create({
     tombol:{
         width:28,
         height:28, 
-        marginLeft:20
     
     },
     arab:{
         marginTop:20,
-        fontSize:20,
-        textAlign:'center'
+        fontSize:12,
+        textAlign:'center',
+        fontFamily:'DroidKufi-Regular'
     },
     audio:{
         flexDirection:'row',
-        backgroundColor:'#3FD4AB',
+        backgroundColor:'#64857C',
         borderRadius:15,
         alignItems:'center',
         justifyContent:'center',
         height: 50,
+        width:'50%',
+        alignSelf:'center'
         
     },
     latinn:{
         marginTop:20,
-        textAlign:'center'
+        textAlign:'center',
+        fontFamily:'AnisaSans'
 
+    },
+    arti:{
+        marginTop:20,
+        fontFamily:'Poppins-Regular',
+        textAlign:'center',
+        fontSize:12
     }
 })
 
@@ -100,13 +109,13 @@ export default class doadoa extends Component {
   
       return(
         <View style={styles.container}>
-            <ScrollView>
+            <ScrollView >
             <View style={styles.audio}>
           <TouchableOpacity onPress={this.state.pencet}>
      <Image source={require('./playy.png')} 
      style={{ width:60,
              height:60, 
-             marginLeft:20}}/>
+             marginRight:5}}/>
       </TouchableOpacity>
       <TouchableOpacity
         onPress={this.kliik}>
@@ -117,13 +126,13 @@ export default class doadoa extends Component {
         <Image source={require('./pausee.png')} 
         style={{ width:60,
             height:60, 
-            marginLeft:20}}/>
+            marginLeft:5}}/>
     </TouchableOpacity>
     </View>
           <Text style={styles.dzikir}> {JSON.stringify(subject)}</Text>
           <Text style={styles.arab}> {isi}</Text>
           <Text style={styles.latinn}> {JSON.stringify(latin)}</Text>
-          <Text style={{marginTop:20}}> {JSON.stringify(arti)}</Text>
+          <Text style={styles.arti}> {JSON.stringify(arti)}</Text>
          
    
           
