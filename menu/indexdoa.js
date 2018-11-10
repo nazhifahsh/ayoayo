@@ -84,6 +84,17 @@ const styles = StyleSheet.create({
     margin: 10,
     width:300
 },
+<<<<<<< HEAD
+touch:{
+  width:350,
+  height:45,
+  borderRadius: 25,
+  backgroundColor: '#9afdff',
+  justifyContent: 'center',
+  alignItems:'center',
+  marginTop:20,
+  opacity:0.8
+=======
   searchInput:{
     
     padding: 10,
@@ -104,5 +115,6 @@ ImageStyle: {
   width: 25,
   position:'relative',
   alignItems: 'center'
+>>>>>>> f556fd38d57db57cfcc0a3f56a0cd7b7d63a84cf
 },
 });

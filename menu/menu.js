@@ -1,4 +1,11 @@
 import React, { Component } from 'react'
+<<<<<<< HEAD
+import { Text, StyleSheet, View,TouchableOpacity,Dimensions,Image, ImageBackground,  } from 'react-native'
+import bgImage from '../src/image/blackg.jpg'
+import Logo from '../src/image/Book3.png'
+import icon1 from '../src/image/viewlist.png'
+import icon2 from '../src/image/bphone.png'
+=======
 import { Text, StyleSheet, View,TouchableOpacity,Dimensions, ImageBackground,Image,   } from 'react-native'
 import bgImage from '../src/image/bluenight.jpg'
 import logo from '../src/image/Book3.png'
@@ -7,12 +14,35 @@ import icon1 from '../src/image/view-list64.png'
 import icon2 from '../src/image/bphone.png'
 
 
+>>>>>>> f556fd38d57db57cfcc0a3f56a0cd7b7d63a84cf
 
 export default class Menu extends Component {
   render() {
     return (
         <ImageBackground source={bgImage}
         style={styles.backgroundContainer}>
+<<<<<<< HEAD
+
+        <View>
+          <Image source={Logo} 
+          style={styles.logo}/>
+          <Text style={styles.logoText}>
+          Nama Aplikasi
+          </Text>
+        </View>
+
+      <View style={{flexDirection:'row'}}>
+                  <TouchableOpacity onPress={()=>this.props.navigation.navigate('Doa')}
+          style={styles.touch}>
+          <Image source={icon1}/>
+        <Text>Kumpulan Doa</Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={()=>this.props.navigation.navigate('Konsul')}
+        style={styles.touch2}>
+        <Image source={icon2}
+        style={{borderRadius:10}}/>
+        <Text>Konsultasi Syariah</Text>
+=======
         <Image source={logo}
         style={styles.logo}/>
         <Text style={styles.logoText}
@@ -28,6 +58,7 @@ export default class Menu extends Component {
         style={styles.touch2}>
         <Image source={icon2}/>
         <Text style={{fontFamily:'Good Unicorn - TTF', fontSize:20, marginTop:9}}>Konsultasi Syariah</Text>
+>>>>>>> f556fd38d57db57cfcc0a3f56a0cd7b7d63a84cf
         </TouchableOpacity>
       </View>
       <View style={{flexDirection:'column'}}>
@@ -46,12 +77,17 @@ export default class Menu extends Component {
 const styles = StyleSheet.create({
   backgroundContainer: {
     flex: 1,
+    
     justifyContent: 'center',
     alignItems: 'center',
     width: null,
      height:null,   
 
   },
+<<<<<<< HEAD
+
+=======
+>>>>>>> f556fd38d57db57cfcc0a3f56a0cd7b7d63a84cf
   logo:{
     width: 100,
     height:  100,
@@ -63,11 +99,46 @@ logoText:{
        fontSize:20,
        fontWeight: '500',
        marginTop: 10,
+<<<<<<< HEAD
+=======
        fontFamily: 'spook' ,
+>>>>>>> f556fd38d57db57cfcc0a3f56a0cd7b7d63a84cf
        marginBottom:30,
        opacity:0.7
    },
   touch:{
+<<<<<<< HEAD
+    width:160,
+    height:110,
+    borderRadius: 25,
+    backgroundColor: '#9afdff',
+    justifyContent: 'center',
+    alignItems:'center',
+    marginRight:20,
+    marginLeft:20,
+    opacity:0.8,
+    shadowColor:'#000',
+    shadowOffset:{width:0, height:2},
+    shadowOpacity:0.8,
+    shadowRadius:2,
+    elevation: 4,
+},
+touch2:{
+  width:160,
+  height:110,
+  borderRadius: 25,
+  backgroundColor: '#7192ff',
+  justifyContent: 'center',
+  shadowColor:'#ff6070',
+  shadowOffset:{width:0, height:2},
+  shadowOpacity:0.8,
+  shadowRadius:2,
+  elevation: 9,
+  alignItems:'center',
+  marginRight:20,
+  marginLeft:20,
+  opacity:0.8
+=======
     width:150,
     height:110,
     borderRadius:14,
@@ -108,6 +179,7 @@ touch2:{
   borderBottomStartRadius:6, 
   borderBottomColor:'#5974ce',
   shadowColor:'#000',
+>>>>>>> f556fd38d57db57cfcc0a3f56a0cd7b7d63a84cf
 },
 QnA:{
   width:200,

@@ -1,5 +1,9 @@
 import React, { Component } from 'react'
+<<<<<<< HEAD
+import { Text, StyleSheet, View,Dimensions,TouchableOpacity, Image, ImageBackground} from 'react-native'
+=======
 import { Text, StyleSheet, View,Dimensions,TouchableOpacity, Image, ImageBackground, AppState} from 'react-native'
+>>>>>>> f556fd38d57db57cfcc0a3f56a0cd7b7d63a84cf
 import bgImage from '../src/image/Starsnight.jpg'
 import Logo from '../src/image/Book3.png'
 import PushController from './PushController'

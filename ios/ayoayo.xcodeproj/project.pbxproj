@@ -518,7 +518,11 @@
 				2D02E4C61E0B4AEC006451C7 /* libRCTSettings-tvOS.a in Frameworks */,
 				2D02E4C71E0B4AEC006451C7 /* libRCTText-tvOS.a in Frameworks */,
 				2D02E4C81E0B4AEC006451C7 /* libRCTWebSocket-tvOS.a in Frameworks */,
+<<<<<<< HEAD
+				7841F288A18B4098B10DCA4E /* libRNSVG-tvOS.a in Frameworks */,
+=======
 				DE50EC6ACAC840B8B67DCE0C /* libRNVectorIcons-tvOS.a in Frameworks */,
+>>>>>>> f556fd38d57db57cfcc0a3f56a0cd7b7d63a84cf
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1449,6 +1453,11 @@
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ayoayo.app/ayoayo";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+<<<<<<< HEAD
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+=======
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
@@ -1458,7 +1467,11 @@
 					"$(inherited)",
 					"$(SRCROOT)\..\node_modules\react-native-vector-icons\RNVectorIconsManager",
 					"$(SRCROOT)\..\node_modules\react-native-sound-player\ios",
+<<<<<<< HEAD
 					"$(SRCROOT)\..\node_modules\react-native-video\ios",
+=======
+>>>>>>> f556fd38d57db57cfcc0a3f56a0cd7b7d63a84cf
+>>>>>>> cf45941266811aa097ab49a23bcd224059152650
 				);
 			};
 			name = Debug;
@@ -1480,6 +1493,11 @@
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ayoayo.app/ayoayo";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+<<<<<<< HEAD
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+=======
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
@@ -1489,7 +1507,11 @@
 					"$(inherited)",
 					"$(SRCROOT)\..\node_modules\react-native-vector-icons\RNVectorIconsManager",
 					"$(SRCROOT)\..\node_modules\react-native-sound-player\ios",
+<<<<<<< HEAD
 					"$(SRCROOT)\..\node_modules\react-native-video\ios",
+=======
+>>>>>>> f556fd38d57db57cfcc0a3f56a0cd7b7d63a84cf
+>>>>>>> cf45941266811aa097ab49a23bcd224059152650
 				);
 			};
 			name = Release;
@@ -1512,9 +1534,15 @@
 				VERSIONING_SYSTEM = "apple-generic";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
+<<<<<<< HEAD
+=======
 					"$(SRCROOT)\..\node_modules\react-native-vector-icons\RNVectorIconsManager",
 					"$(SRCROOT)\..\node_modules\react-native-sound-player\ios",
+<<<<<<< HEAD
 					"$(SRCROOT)\..\node_modules\react-native-video\ios",
+=======
+>>>>>>> f556fd38d57db57cfcc0a3f56a0cd7b7d63a84cf
+>>>>>>> cf45941266811aa097ab49a23bcd224059152650
 				);
 			};
 			name = Debug;
@@ -1536,9 +1564,15 @@
 				VERSIONING_SYSTEM = "apple-generic";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
+<<<<<<< HEAD
+=======
 					"$(SRCROOT)\..\node_modules\react-native-vector-icons\RNVectorIconsManager",
 					"$(SRCROOT)\..\node_modules\react-native-sound-player\ios",
+<<<<<<< HEAD
 					"$(SRCROOT)\..\node_modules\react-native-video\ios",
+=======
+>>>>>>> f556fd38d57db57cfcc0a3f56a0cd7b7d63a84cf
+>>>>>>> cf45941266811aa097ab49a23bcd224059152650
 				);
 			};
 			name = Release;
@@ -1568,6 +1602,11 @@
 				TVOS_DEPLOYMENT_TARGET = 9.2;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+<<<<<<< HEAD
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+=======
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
@@ -1577,7 +1616,11 @@
 					"$(inherited)",
 					"$(SRCROOT)\..\node_modules\react-native-vector-icons\RNVectorIconsManager",
 					"$(SRCROOT)\..\node_modules\react-native-sound-player\ios",
+<<<<<<< HEAD
 					"$(SRCROOT)\..\node_modules\react-native-video\ios",
+=======
+>>>>>>> f556fd38d57db57cfcc0a3f56a0cd7b7d63a84cf
+>>>>>>> cf45941266811aa097ab49a23bcd224059152650
 				);
 			};
 			name = Debug;
@@ -1607,6 +1650,11 @@
 				TVOS_DEPLOYMENT_TARGET = 9.2;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+<<<<<<< HEAD
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+=======
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
@@ -1616,7 +1664,11 @@
 					"$(inherited)",
 					"$(SRCROOT)\..\node_modules\react-native-vector-icons\RNVectorIconsManager",
 					"$(SRCROOT)\..\node_modules\react-native-sound-player\ios",
+<<<<<<< HEAD
 					"$(SRCROOT)\..\node_modules\react-native-video\ios",
+=======
+>>>>>>> f556fd38d57db57cfcc0a3f56a0cd7b7d63a84cf
+>>>>>>> cf45941266811aa097ab49a23bcd224059152650
 				);
 			};
 			name = Release;
@@ -1645,6 +1697,11 @@
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+<<<<<<< HEAD
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+=======
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
@@ -1654,7 +1711,11 @@
 					"$(inherited)",
 					"$(SRCROOT)\..\node_modules\react-native-vector-icons\RNVectorIconsManager",
 					"$(SRCROOT)\..\node_modules\react-native-sound-player\ios",
+<<<<<<< HEAD
 					"$(SRCROOT)\..\node_modules\react-native-video\ios",
+=======
+>>>>>>> f556fd38d57db57cfcc0a3f56a0cd7b7d63a84cf
+>>>>>>> cf45941266811aa097ab49a23bcd224059152650
 				);
 			};
 			name = Debug;
@@ -1683,6 +1744,11 @@
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+<<<<<<< HEAD
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+=======
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
@@ -1692,7 +1758,11 @@
 					"$(inherited)",
 					"$(SRCROOT)\..\node_modules\react-native-vector-icons\RNVectorIconsManager",
 					"$(SRCROOT)\..\node_modules\react-native-sound-player\ios",
+<<<<<<< HEAD
 					"$(SRCROOT)\..\node_modules\react-native-video\ios",
+=======
+>>>>>>> f556fd38d57db57cfcc0a3f56a0cd7b7d63a84cf
+>>>>>>> cf45941266811aa097ab49a23bcd224059152650
 				);
 			};
 			name = Release;
