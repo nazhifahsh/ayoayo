@@ -1,11 +1,51 @@
 import React, { Component } from 'react'
+<<<<<<< HEAD
 import { Text, StyleSheet, View,Dimensions,TouchableOpacity, Image, ImageBackground} from 'react-native'
+=======
+import { Text, StyleSheet, View,Dimensions,TouchableOpacity, Image, ImageBackground, AppState} from 'react-native'
+>>>>>>> f556fd38d57db57cfcc0a3f56a0cd7b7d63a84cf
 import bgImage from '../src/image/Starsnight.jpg'
 import Logo from '../src/image/Book3.png'
-
+import PushController from './PushController'
+import PushNotification from 'react-native-push-notification'
 
 const {width: WIDTH}= Dimensions.get('window')
 export default class Splash extends Component {
+  constructor(props){
+    super(props);
+  
+    this.handleAppStateChange = this.handleAppStateChange.bind(this);
+    this.state={
+      seconds: 2
+    };
+  }
+
+  componentDidMount() {
+    AppState.addEventListener('change', this.handleAppStateChange);
+  }
+
+  componentWillUnmount() {
+    AppState.removeEventListener('change', this.handleAppStateChange);
+  }
+
+ 
+  handleAppStateChange(appState) {
+    if (appState === "background"){
+      PushNotification.localNotificationSchedule({
+        smallIcon: "ic_notification",
+        message: "Ayo Berdoa", 
+        date: new Date(Date.now() + (990*1000)) ,
+        repeatType:'day',
+        
+        number:0,
+        userInfo: { id: new Date(Date.now()), },
+        
+        
+      });
+      
+    
+    }
+  }
   render() {
     return (
       <ImageBackground style={styles.backgroundContainer}
@@ -13,10 +53,12 @@ export default class Splash extends Component {
       <View>
       <Image source={Logo} style={styles.logo}/>
           <TouchableOpacity onPress={()=>this.props.navigation.navigate('Menu')}>
-        <Text> Tap to Continue </Text>
+        <Text style={{fontFamily:'Poppins-Light'}}> Tap to Continue </Text>
         </TouchableOpacity>
+        <PushController/>
       </View>
       </ImageBackground>
+    
     )
   }
 }
@@ -54,8 +96,8 @@ logoText:{
            marginBottom: 50
        },
        continue:{
-          width:WIDTH - 60,
-          height:45,
+          width:350,
+          height:80,
           borderRadius: 25,
           justifyContent: 'center',
           alignItems:'center',
