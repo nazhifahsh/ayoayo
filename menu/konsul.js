@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Text, StyleSheet, View, ImageBackground, TouchableOpacity, Dimensions } from 'react-native'
 import bgImage from '../src/image/Galaxy.jpg'
 
-const {width: WIDTH}= Dimensions.get('window')
+
 
 export default class Konsul extends Component {
   render() {
@@ -36,15 +36,26 @@ const styles = StyleSheet.create({
       justifyContent: 'center',
       alignItems: 'center',
       width: null,
-       height:null
+       height:null,
+       shadowColor:'#000',
+       shadowOffset:{width:0, height:2},
+       shadowOpacity:0.8,
+       shadowRadius:2,
+       elevation: 1,
+       
     },
     touch:{
-      width:WIDTH - 60,
+      width:350,
       height:45,
       borderRadius: 25,
       backgroundColor: '#9afdff',
       justifyContent: 'center',
       alignItems:'center',
+      shadowColor:'#000',
+       shadowOffset:{width:0, height:2},
+       shadowOpacity:0.8,
+       shadowRadius:2,
+       elevation: 4,
       marginTop:20,
       opacity:0.8
     },

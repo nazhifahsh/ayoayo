@@ -62,7 +62,7 @@ backgroundContainer: {
    height:null
 },
 touch:{
-  width:WIDTH - 60,
+  width:350,
   height:45,
   borderRadius: 25,
   backgroundColor: '#9afdff',

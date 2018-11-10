@@ -47,6 +47,7 @@ const styles = StyleSheet.create({
     width: null,
      height:null
   },
+
   logo:{
     width: 100,
     height:  100,
@@ -70,7 +71,12 @@ logoText:{
     alignItems:'center',
     marginRight:20,
     marginLeft:20,
-    opacity:0.8
+    opacity:0.8,
+    shadowColor:'#000',
+    shadowOffset:{width:0, height:2},
+    shadowOpacity:0.8,
+    shadowRadius:2,
+    elevation: 4,
 },
 touch2:{
   width:160,
@@ -78,6 +84,11 @@ touch2:{
   borderRadius: 25,
   backgroundColor: '#7192ff',
   justifyContent: 'center',
+  shadowColor:'#ff6070',
+  shadowOffset:{width:0, height:2},
+  shadowOpacity:0.8,
+  shadowRadius:2,
+  elevation: 9,
   alignItems:'center',
   marginRight:20,
   marginLeft:20,
