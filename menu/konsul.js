@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Text, StyleSheet, View, ImageBackground, TouchableOpacity, Dimensions, Image } from 'react-native'
 
 
-
+const {width: WIDTH}= Dimensions.get('window')
 
 export default class Konsul extends Component {
   render() {
@@ -39,34 +39,15 @@ const styles = StyleSheet.create({
       justifyContent: 'center',
       alignItems: 'center',
       width: null,
-       height:null,
-       shadowColor:'#000',
-       shadowOffset:{width:0, height:2},
-       shadowOpacity:0.8,
-       shadowRadius:2,
-       elevation: 1,
-       
+       height:null
     },
     touch:{
-<<<<<<< HEAD
-      width:350,
-      height:45,
-      borderRadius: 25,
-      backgroundColor: '#9afdff',
-      justifyContent: 'center',
-=======
       width:100,
       height:100,
       borderRadius: 100,
       backgroundColor: '#861E27',
       justifyContent:'flex-start',
->>>>>>> f556fd38d57db57cfcc0a3f56a0cd7b7d63a84cf
       alignItems:'center',
-      shadowColor:'#000',
-       shadowOffset:{width:0, height:2},
-       shadowOpacity:0.8,
-       shadowRadius:2,
-       elevation: 4,
       marginTop:20,
       opacity:0.8,
       margin:10

@@ -1,27 +1,18 @@
 import React, { Component } from 'react'
-<<<<<<< HEAD
-import { Text, StyleSheet, View,TouchableOpacity,Dimensions,Image, ImageBackground,  } from 'react-native'
-import bgImage from '../src/image/blackg.jpg'
-import Logo from '../src/image/Book3.png'
-import icon1 from '../src/image/viewlist.png'
-import icon2 from '../src/image/bphone.png'
-=======
 import { Text, StyleSheet, View,TouchableOpacity,Dimensions, ImageBackground,Image,   } from 'react-native'
 import bgImage from '../src/image/bluenight.jpg'
-import logo from '../src/image/Book3.png'
+import Logo from '../src/image/Book3.png'
 import qna from '../src/image/question64.png'
 import icon1 from '../src/image/view-list64.png'
 import icon2 from '../src/image/bphone.png'
 
 
->>>>>>> f556fd38d57db57cfcc0a3f56a0cd7b7d63a84cf
 
 export default class Menu extends Component {
   render() {
     return (
         <ImageBackground source={bgImage}
         style={styles.backgroundContainer}>
-<<<<<<< HEAD
 
         <View>
           <Image source={Logo} 
@@ -42,23 +33,6 @@ export default class Menu extends Component {
         <Image source={icon2}
         style={{borderRadius:10}}/>
         <Text>Konsultasi Syariah</Text>
-=======
-        <Image source={logo}
-        style={styles.logo}/>
-        <Text style={styles.logoText}
-        style={{fontFamily:'Poppins-Light', fontSize:30}}>
-        Lets Pray</Text>
-      <View style={{flexDirection:'row'}}>
-                  <TouchableOpacity onPress={()=>this.props.navigation.navigate('Doa')}
-          style={styles.touch} >
-          <Image source={icon1}/>
-        <Text style={{fontFamily:'Good Unicorn - TTF', fontSize:20, marginTop:2}}>Kumpulan Doa</Text>
-        </TouchableOpacity>
-        <TouchableOpacity onPress={()=>this.props.navigation.navigate('Konsul')}
-        style={styles.touch2}>
-        <Image source={icon2}/>
-        <Text style={{fontFamily:'Good Unicorn - TTF', fontSize:20, marginTop:9}}>Konsultasi Syariah</Text>
->>>>>>> f556fd38d57db57cfcc0a3f56a0cd7b7d63a84cf
         </TouchableOpacity>
       </View>
       <View style={{flexDirection:'column'}}>
@@ -84,10 +58,6 @@ const styles = StyleSheet.create({
      height:null,   
 
   },
-<<<<<<< HEAD
-
-=======
->>>>>>> f556fd38d57db57cfcc0a3f56a0cd7b7d63a84cf
   logo:{
     width: 100,
     height:  100,
@@ -99,15 +69,11 @@ logoText:{
        fontSize:20,
        fontWeight: '500',
        marginTop: 10,
-<<<<<<< HEAD
-=======
        fontFamily: 'spook' ,
->>>>>>> f556fd38d57db57cfcc0a3f56a0cd7b7d63a84cf
        marginBottom:30,
        opacity:0.7
    },
   touch:{
-<<<<<<< HEAD
     width:160,
     height:110,
     borderRadius: 25,
@@ -137,8 +103,7 @@ touch2:{
   alignItems:'center',
   marginRight:20,
   marginLeft:20,
-  opacity:0.8
-=======
+  opacity:0.8,
     width:150,
     height:110,
     borderRadius:14,
@@ -179,7 +144,6 @@ touch2:{
   borderBottomStartRadius:6, 
   borderBottomColor:'#5974ce',
   shadowColor:'#000',
->>>>>>> f556fd38d57db57cfcc0a3f56a0cd7b7d63a84cf
 },
 QnA:{
   width:200,
