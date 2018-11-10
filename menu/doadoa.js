@@ -44,8 +44,8 @@ const styles= StyleSheet.create({
 
     },
     tombol:{
-        width:40,
-        height:40, 
+        width:28,
+        height:28, 
         marginLeft:20
     
     },
@@ -60,13 +60,36 @@ const styles= StyleSheet.create({
         borderRadius:15,
         alignItems:'center',
         justifyContent:'center',
-        height: 50
+        height: 50,
+        
+    },
+    latinn:{
+        marginTop:20,
+        textAlign:'center'
+
     }
 })
 
 
 export default class doadoa extends Component {
-   
+   constructor(props){
+       super(props);
+       this.state={
+           pencet:()=>SoundPlayer.playSoundFile('cant_take_my_eyes_off_you','mp3'),
+       }
+   }
+   klik=()=>{
+       SoundPlayer.pause()
+       this.setState({
+           pencet:()=>SoundPlayer.resume()
+       })
+   }
+   kliik=()=>{
+        SoundPlayer.stop()
+        this.setState({
+            pencet:()=>SoundPlayer.playSoundFile('cant_take_my_eyes_off_you','mp3')
+    })
+   }
     render() {
       const { params } = this.props.navigation.state;
       const subject = params ? params.subject : null;
@@ -79,25 +102,27 @@ export default class doadoa extends Component {
         <View style={styles.container}>
             <ScrollView>
             <View style={styles.audio}>
-          <TouchableOpacity onPress={() =>SoundPlayer.playSoundFile('cant_take_my_eyes_off_you','mp3')}>
-     <Image source={require('./play.png')} style={styles.tombol}/>
+          <TouchableOpacity onPress={this.state.pencet}>
+     <Image source={require('./playy.png')} 
+     style={{ width:60,
+             height:60, 
+             marginLeft:20}}/>
       </TouchableOpacity>
       <TouchableOpacity
-        onPress={() =>SoundPlayer.stop()}>
-        <Image source={require('./stop.png')} style={styles.tombol}/>
+        onPress={this.kliik}>
+        <Image source={require('./stopp.png')} style={styles.tombol}/>
     </TouchableOpacity>
     <TouchableOpacity
-        onPress={() =>SoundPlayer.pause()} >
-        <Image source={require('./pause.png')} style={styles.tombol}/>
-    </TouchableOpacity>
-    <TouchableOpacity
-        onPress={() =>SoundPlayer.resume()} >
-        <Image source={require('./pp.png')} style={styles.tombol}/>
+        onPress={this.klik} >
+        <Image source={require('./pausee.png')} 
+        style={{ width:60,
+            height:60, 
+            marginLeft:20}}/>
     </TouchableOpacity>
     </View>
           <Text style={styles.dzikir}> {JSON.stringify(subject)}</Text>
-          <Text style={styles.arab}> {JSON.stringify(isi)}</Text>
-          <Text style={{marginTop:20}}> {JSON.stringify(latin)}</Text>
+          <Text style={styles.arab}> {isi}</Text>
+          <Text style={styles.latinn}> {JSON.stringify(latin)}</Text>
           <Text style={{marginTop:20}}> {JSON.stringify(arti)}</Text>
          
    

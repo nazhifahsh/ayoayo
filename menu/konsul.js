@@ -15,16 +15,16 @@ export default class Konsul extends Component {
       <View style={{flex:3, flexDirection:'row'}}>
       <TouchableOpacity onPress={()=>this.props.navigation.navigate('UstAulia')}
           style={styles.touch}>
-           <Image source={require('./male.png')} style={styles.mag}/>
+           <Image source={require('./male2.png')} style={styles.mag}/>
         <Text style={styles.tik}>Ustadz Auliya</Text>
         </TouchableOpacity>
         <TouchableOpacity onPress={()=>this.props.navigation.navigate('UstBurhan')}
           style={styles.touch}>
-          <Image source={require('./male.png')} style={styles.mag}/>
+          <Image source={require('./male2.png')} style={styles.mag}/>
         <Text style={styles.tik}>Ustadz Burhan</Text>
         </TouchableOpacity><TouchableOpacity onPress={()=>this.props.navigation.navigate('UstFauzan')}
           style={styles.touch}>
-           <Image source={require('./male.png')} style={styles.mag}/>
+           <Image source={require('./male2.png')} style={styles.mag}/>
         <Text style={styles.tik}>Ustadz Fauzan</Text>
         </TouchableOpacity>
       </View>
@@ -58,9 +58,9 @@ const styles = StyleSheet.create({
       paddingTop:8
     },
     mag:{
-      width:20, 
-      height:52, 
-      marginTop:10
+      width:40, 
+      height:32, 
+      marginTop:20
     }
     });
 

@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, ScrollView, TouchableOpacity,ActivityIndicator,
 import SearchInput, { createFilter } from 'react-native-search-filter';
 import emails from './IsiQnA';
 import icon from '../src/image/magnifier32.png'
-import bgImage from '../src/image/Purple.jpg'
+import bgImage from '../src/image/koko2.jpg'
 import { ListItem } from 'react-native-elements';
 
 const KEYS_TO_FILTERS = ['name'];
@@ -81,8 +81,6 @@ const styles = StyleSheet.create({
     color: 'rgba(0,0,0,0.5)'
   },
   searchInput:{
-    padding: 10,
-    borderColor: '#CCC',
-    borderWidth: 1
+    padding: 10
   }
 });

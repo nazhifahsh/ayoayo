@@ -1,9 +1,25 @@
 import React,{Component} from 'react';
-import {Text, View ,Image,StyleSheet,Dimensions} from 'react-native';
+import {Text, View ,Image,StyleSheet,Dimensions,TouchableOpacity} from 'react-native';
 import Video from 'react-native-video';
 
 
 export default class LMB extends Component {
+    constructor(props){
+        super(props);
+        this.state={
+            pencet:false
+        }
+    }
+    tet=()=>{
+        this.setState({
+            pencet:true
+        })
+    }
+    tit=()=>{
+        this.setState({
+            pencet:false
+        })
+    }
     static navigationOptions = {
         title: 'Larangan Makan Berdiri',
     };
@@ -22,14 +38,21 @@ export default class LMB extends Component {
                        volume={1.0}
                        muted={false}
                        repeat={true}
-                       paused={false}
+                       paused={this.state.pencet}
                        title={this.props.title}
                        onback={() => null}
                        shouldPlay
                        resizeMode=""
                        style={{  width:'100%' ,height: 300, }}
                 />
-
+                <View style={{flexDirection:'row'}}>
+                <TouchableOpacity onPress={this.tet}>
+                <Image source={require('../pausee.png') }style={{width:40, height:40}}/>
+                </TouchableOpacity>
+                <TouchableOpacity onPress={this.tit}>
+                <Image source={require('../playy.png') }style={{width:40, height:40}}/>
+                </TouchableOpacity>
+                </View>
 
             </View>
         );
@@ -37,25 +60,25 @@ export default class LMB extends Component {
 }
 const styles = StyleSheet.create({
     container: {
-        justifyContent: 'center',
+        justifyContent: 'flex-start',
         alignItems: 'center',
         flex:1,
-        backgroundColor:'#04c6b2',
+        backgroundColor:'#C5CBD1',
         width:null,
         height:null
     },
     judul:{
-        fontFamily:'Quite Magical - TTF',
-        fontSize:30,
+        fontFamily:'unicephalon',
+        fontSize:17,
         width:'75%',
         justifyContent:'center',
         textAlign:'center',
-        height:100,
-        backgroundColor:'#0074b8',
+        height:120,
+        backgroundColor:'#8D8D6E',
         textAlignVertical:'center',
         borderRadius:20,
         alignItems:'center',
-        marginBottom:10
+        marginTop:45
 
         
     },
