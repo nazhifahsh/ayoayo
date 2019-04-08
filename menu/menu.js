@@ -13,6 +13,7 @@ export default class Menu extends Component {
     return (
         <ImageBackground source={bgImage}
         style={styles.backgroundContainer}>
+<<<<<<< HEAD
 
         <View>
           <Image source={Logo} 
@@ -33,6 +34,23 @@ export default class Menu extends Component {
         <Image source={icon2}
         style={{borderRadius:10}}/>
         <Text>Konsultasi Syariah</Text>
+=======
+        <Image source={logo}
+        style={styles.logo}/>
+        <Text style={styles.logoText}
+        style={{fontFamily:'Poppins-Light', fontSize:30}}>
+        Lets Pray</Text>
+      <View style={{flexDirection:'row'}}>
+                  <TouchableOpacity onPress={()=>this.props.navigation.navigate('Doa')}
+          style={styles.touch} >
+          <Image source={icon1}/>
+        <Text style={{fontFamily:'Good Unicorn - TTF', fontSize:20, marginTop:2}}>Kumpulan Doa</Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={()=>this.props.navigation.navigate('Konsul')}
+        style={styles.touch2}>
+        <Image source={icon2}/>
+        <Text style={{fontFamily:'Good Unicorn - TTF', fontSize:20, marginTop:9}}>Konsultasi Syariah</Text>
+>>>>>>> parent of f953e35... Merge branch 'master' of https://github.com/nazhifahsh/ayoayo
         </TouchableOpacity>
       </View>
       <View style={{flexDirection:'column'}}>
@@ -51,7 +69,6 @@ export default class Menu extends Component {
 const styles = StyleSheet.create({
   backgroundContainer: {
     flex: 1,
-    
     justifyContent: 'center',
     alignItems: 'center',
     width: null,
@@ -74,6 +91,7 @@ logoText:{
        opacity:0.7
    },
   touch:{
+<<<<<<< HEAD
     width:160,
     height:110,
     borderRadius: 25,
@@ -104,6 +122,8 @@ touch2:{
   marginRight:20,
   marginLeft:20,
   opacity:0.8,
+=======
+>>>>>>> parent of f953e35... Merge branch 'master' of https://github.com/nazhifahsh/ayoayo
     width:150,
     height:110,
     borderRadius:14,
