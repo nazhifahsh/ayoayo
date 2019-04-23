@@ -1,40 +1,18 @@
 import React, { Component } from 'react'
 import { Text, StyleSheet, View,TouchableOpacity,Dimensions, ImageBackground,Image,   } from 'react-native'
 import bgImage from '../src/image/bluenight.jpg'
-import Logo from '../src/image/Book3.png'
+import logo from '../src/image/Book3.png'
 import qna from '../src/image/question64.png'
 import icon1 from '../src/image/view-list64.png'
 import icon2 from '../src/image/bphone.png'
+import back from '../src/image/backArrow.png'
 
 
 
 export default class Menu extends Component {
   render() {
     return (
-        <ImageBackground source={bgImage}
-        style={styles.backgroundContainer}>
-<<<<<<< HEAD
-
-        <View>
-          <Image source={Logo} 
-          style={styles.logo}/>
-          <Text style={styles.logoText}>
-          Nama Aplikasi
-          </Text>
-        </View>
-
-      <View style={{flexDirection:'row'}}>
-                  <TouchableOpacity onPress={()=>this.props.navigation.navigate('Doa')}
-          style={styles.touch}>
-          <Image source={icon1}/>
-        <Text>Kumpulan Doa</Text>
-        </TouchableOpacity>
-        <TouchableOpacity onPress={()=>this.props.navigation.navigate('Konsul')}
-        style={styles.touch2}>
-        <Image source={icon2}
-        style={{borderRadius:10}}/>
-        <Text>Konsultasi Syariah</Text>
-=======
+        <View style={styles.backgroundContainer}>
         <Image source={logo}
         style={styles.logo}/>
         <Text style={styles.logoText}
@@ -50,7 +28,6 @@ export default class Menu extends Component {
         style={styles.touch2}>
         <Image source={icon2}/>
         <Text style={{fontFamily:'Good Unicorn - TTF', fontSize:20, marginTop:9}}>Konsultasi Syariah</Text>
->>>>>>> parent of f953e35... Merge branch 'master' of https://github.com/nazhifahsh/ayoayo
         </TouchableOpacity>
       </View>
       <View style={{flexDirection:'column'}}>
@@ -61,7 +38,7 @@ export default class Menu extends Component {
         </TouchableOpacity>
         </View>
       
-      </ImageBackground>
+      </View>
     )
   }
 }
@@ -73,6 +50,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     width: null,
      height:null,   
+     backgroundColor:'#698AC0'
 
   },
   logo:{
@@ -91,39 +69,6 @@ logoText:{
        opacity:0.7
    },
   touch:{
-<<<<<<< HEAD
-    width:160,
-    height:110,
-    borderRadius: 25,
-    backgroundColor: '#9afdff',
-    justifyContent: 'center',
-    alignItems:'center',
-    marginRight:20,
-    marginLeft:20,
-    opacity:0.8,
-    shadowColor:'#000',
-    shadowOffset:{width:0, height:2},
-    shadowOpacity:0.8,
-    shadowRadius:2,
-    elevation: 4,
-},
-touch2:{
-  width:160,
-  height:110,
-  borderRadius: 25,
-  backgroundColor: '#7192ff',
-  justifyContent: 'center',
-  shadowColor:'#ff6070',
-  shadowOffset:{width:0, height:2},
-  shadowOpacity:0.8,
-  shadowRadius:2,
-  elevation: 9,
-  alignItems:'center',
-  marginRight:20,
-  marginLeft:20,
-  opacity:0.8,
-=======
->>>>>>> parent of f953e35... Merge branch 'master' of https://github.com/nazhifahsh/ayoayo
     width:150,
     height:110,
     borderRadius:14,
@@ -185,5 +130,5 @@ QnA:{
   alignItems:'center',
   marginTop:20,
   
-}
+},
 })

@@ -7,8 +7,7 @@ const {width: WIDTH}= Dimensions.get('window')
 export default class Konsul extends Component {
   render() {
     return (
-      <ImageBackground source={require('./n1.jpg')}
-      style={styles.backgroundContainer}>
+      <View style={styles.backgroundContainer}>
       <View style={{flex:2}}>
       <Image source={require('./kkons.jpg')} style={{width:360, height:200}}/>
       </View>
@@ -28,7 +27,7 @@ export default class Konsul extends Component {
         <Text style={styles.tik}>Ustadz Fauzan</Text>
         </TouchableOpacity>
       </View>
-      </ImageBackground>
+      </View>
     )
   }
 }
@@ -39,7 +38,8 @@ const styles = StyleSheet.create({
       justifyContent: 'center',
       alignItems: 'center',
       width: null,
-       height:null
+       height:null,
+       backgroundColor:'#0a0a33'
     },
     touch:{
       width:100,

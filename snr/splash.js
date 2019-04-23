@@ -44,8 +44,7 @@ export default class Splash extends Component {
   }
   render() {
     return (
-      <ImageBackground style={styles.backgroundContainer}
-      source={bgImage}>
+      <View style={styles.backgroundContainer}>
       <View>
       <Image source={Logo} style={styles.logo}/>
           <TouchableOpacity onPress={()=>this.props.navigation.navigate('Menu')}>
@@ -53,7 +52,7 @@ export default class Splash extends Component {
         </TouchableOpacity>
         <PushController/>
       </View>
-      </ImageBackground>
+      </View>
     
     )
   }
@@ -65,7 +64,9 @@ backgroundContainer: {
   justifyContent: 'center',
   alignItems: 'center',
   width: null,
-   height:null
+   height:null,
+   backgroundColor:'#027091'
+   
 },
 title:{
   color:'#ffffff',

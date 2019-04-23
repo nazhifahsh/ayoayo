@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
-	<string>ayoayo</string>
+	<string>Prayer: Let's Pray</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -55,10 +55,22 @@
 	</dict>
 	<key>UIAppFonts</key>
 	<array>
-		<string>Dillova.ttf</string>
+		<string>AnisaSans.ttf</string>
+		<string>AsparagusSprouts.ttf</string>
 		<string>chalala.ttf</string>
+		<string>dacasa.ttf</string>
+		<string>Dillova.ttf</string>
+		<string>DroidKufi-Bold.ttf</string>
+		<string>DroidKufi-Regular.ttf</string>
+		<string>Good Unicorn - TTF.ttf</string>
 		<string>Jellee-Roman.ttf</string>
 		<string>Meshes.ttf</string>
+		<string>Mothanna-Bold-Oblique.ttf</string>
+		<string>Mothanna-Bold.ttf</string>
+		<string>Mothanna-Oblique.ttf</string>
+		<string>Mothanna.ttf</string>
+		<string>Painter_PERSONAL_USE_ONLY.ttf</string>
+		<string>Peony-Regular.otf</string>
 		<string>Poppins-Black.ttf</string>
 		<string>Poppins-BlackItalic.ttf</string>
 		<string>Poppins-Bold.ttf</string>
@@ -77,23 +89,17 @@
 		<string>Poppins-SemiBoldItalic.ttf</string>
 		<string>Poppins-Thin.ttf</string>
 		<string>Poppins-ThinItalic.ttf</string>
+		<string>Quite Magical - TTF.ttf</string>
+		<string>RipeApricots.ttf</string>
 		<string>Spooky Font.ttf</string>
+		<string>Sweet Hipster.ttf</string>
 		<string>tecnico_bold.ttf</string>
 		<string>tecnico_bolditalic.ttf</string>
 		<string>tecnico_regular.ttf</string>
 		<string>tecnico_regularitalic.ttf</string>
+		<string>TropicalAsianDEMO-Regular.ttf</string>
 		<string>unicephalon.ttf</string>
 		<string>velocity_demo.ttf</string>
-		<string>AnisaSans.ttf</string>
-		<string>AsparagusSprouts.ttf</string>
-		<string>dacasa.ttf</string>
-		<string>Good Unicorn - TTF.ttf</string>
-		<string>Painter_PERSONAL_USE_ONLY.ttf</string>
-		<string>Peony-Regular.otf</string>
-		<string>Quite Magical - TTF.ttf</string>
-		<string>RipeApricots.ttf</string>
-		<string>Sweet Hipster.ttf</string>
-		<string>TropicalAsianDEMO-Regular.ttf</string>
 		<string>AntDesign.ttf</string>
 		<string>Entypo.ttf</string>
 		<string>EvilIcons.ttf</string>
@@ -109,12 +115,6 @@
 		<string>Octicons.ttf</string>
 		<string>SimpleLineIcons.ttf</string>
 		<string>Zocial.ttf</string>
-		<string>Mothanna-Bold-Oblique.ttf</string>
-		<string>Mothanna-Bold.ttf</string>
-		<string>Mothanna-Oblique.ttf</string>
-		<string>Mothanna.ttf</string>
-		<string>DroidKufi-Bold.ttf</string>
-		<string>DroidKufi-Regular.ttf</string>
 	</array>
 </dict>
 </plist>

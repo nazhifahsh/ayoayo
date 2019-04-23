@@ -21,8 +21,8 @@ export default class QandA extends Component {
   render() {
     const filteredEmails = emails.filter(createFilter(this.state.searchTerm, KEYS_TO_FILTERS))
     return (
-      <ImageBackground source={bgImage}style={styles.container}>
-      <View>
+
+      <View style={{backgroundColor:'#3b9248'}}>
         <View style= {styles.SectionStyle}>
        <Image source={icon} style={{marginStart:10}}/>
         <SearchInput 
@@ -46,10 +46,11 @@ export default class QandA extends Component {
           })}
           
         </ScrollView>
+        <ActivityIndicator/>
       </View>
       
-      <ActivityIndicator/>
-      </ImageBackground>
+      
+     
     );
   }
 }

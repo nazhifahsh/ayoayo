@@ -24,9 +24,9 @@ export default class Doa extends Component {
     const filteredEmails = doa.filter(createFilter(this.state.searchTerm, cari))
     return (
       
-      <ImageBackground source={bgImage}
-      style={styles.backgroundContainer}>
-      <View >
+      
+     
+      <View  style={{backgroundColor:'#349586'}}>
         <View style= {styles.SectionStyle}>
         <Image source={icon} style={{marginStart:10}}/>
         <SearchInput 
@@ -53,7 +53,7 @@ export default class Doa extends Component {
     }
         </ScrollView>
       </View>
-      </ImageBackground>
+      
     );
   }
 }
