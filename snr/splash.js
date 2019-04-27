@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Text, StyleSheet, View,Dimensions,TouchableOpacity, Image, ImageBackground, AppState} from 'react-native'
-import bgImage from '../src/image/Starsnight.jpg'
+import bgImage from '../src/image/it1.jpg'
 import Logo from '../src/image/Book3.png'
 import PushController from './PushController'
 import PushNotification from 'react-native-push-notification'
@@ -44,15 +44,15 @@ export default class Splash extends Component {
   }
   render() {
     return (
-      <View style={styles.backgroundContainer}>
+      <ImageBackground source={bgImage} style={styles.backgroundContainer}>
       <View>
       <Image source={Logo} style={styles.logo}/>
           <TouchableOpacity onPress={()=>this.props.navigation.navigate('Menu')}>
-        <Text style={{fontFamily:'Poppins-Light'}}> Tap to Continue </Text>
+        <Text style={styles.lala}> Tap to Continue </Text>
         </TouchableOpacity>
         <PushController/>
       </View>
-      </View>
+      </ImageBackground>
     
     )
   }
@@ -100,5 +100,11 @@ logoText:{
           alignItems:'center',
           marginTop:20
       },
+      lala:{
+        padding:10,
+        backgroundColor:'#f1beb1',
+        borderRadius:20
+        
+      }
 
     });

@@ -63,7 +63,7 @@ const styles = StyleSheet.create({
         justifyContent: 'flex-start',
         alignItems: 'center',
         flex:1,
-        backgroundColor:'#C5CBD1',
+        backgroundColor:'#cbfee8',
         width:null,
         height:null
     },
@@ -74,7 +74,7 @@ const styles = StyleSheet.create({
         justifyContent:'center',
         textAlign:'center',
         height:120,
-        backgroundColor:'#8D8D6E',
+        backgroundColor:'#73e1ad',
         textAlignVertical:'center',
         borderRadius:20,
         alignItems:'center',

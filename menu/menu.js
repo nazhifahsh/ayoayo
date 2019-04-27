@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Text, StyleSheet, View,TouchableOpacity,Dimensions, ImageBackground,Image,   } from 'react-native'
-import bgImage from '../src/image/bluenight.jpg'
+import bgImage from '../src/image/hijo.jpg'
 import logo from '../src/image/Book3.png'
 import qna from '../src/image/question64.png'
 import icon1 from '../src/image/view-list64.png'
@@ -12,7 +12,7 @@ import back from '../src/image/backArrow.png'
 export default class Menu extends Component {
   render() {
     return (
-        <View style={styles.backgroundContainer}>
+        <ImageBackground source={bgImage} style={styles.backgroundContainer}>
         <Image source={logo}
         style={styles.logo}/>
         <Text style={styles.logoText}
@@ -38,7 +38,7 @@ export default class Menu extends Component {
         </TouchableOpacity>
         </View>
       
-      </View>
+      </ImageBackground>
     )
   }
 }

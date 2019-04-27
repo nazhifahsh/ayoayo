@@ -5,81 +5,6 @@ import doa from './doa';
 import bgImage from '../src/image/bluesky.jpg'
 import SoundPlayer from 'react-native-sound-player'
 
-const styles= StyleSheet.create({
-    container:{
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        width: null,
-         height:null,
-         padding:10,
-         backgroundColor:'#2E846E'
-
-    },
-    dzikir:{
-        marginTop:10,
-        width:'80%',
-        alignSelf:'center',
-        textAlignVertical:'center',
-        fontSize:30,  
-        backgroundColor:'#64857C',
-        justifyContent: 'center',
-        alignItems:'center',
-        textAlign:'center',
-        height:70,
-        marginBottom:20,
-        fontFamily:'AsparagusSprouts',
-        borderRadius:8
-      
-        
-        
-    },
-    latin:{
-        width:'100%',
-        justifyContent:'center',
-        textAlign:'center',
-        alignItems:'center',
-        height:40,
-        backgroundColor:'#0099c3'
-
-    },
-    tombol:{
-        width:28,
-        height:28, 
-    
-    },
-    arab:{
-        marginTop:20,
-        fontSize:12,
-        textAlign:'center',
-        fontFamily:'DroidKufi-Regular'
-    },
-    audio:{
-        flexDirection:'row',
-        backgroundColor:'#64857C',
-        borderRadius:15,
-        alignItems:'center',
-        justifyContent:'center',
-        height: 50,
-        width:'50%',
-        alignSelf:'center'
-        
-    },
-    latinn:{
-        marginTop:20,
-        textAlign:'center',
-        fontFamily:'AnisaSans'
-
-    },
-    arti:{
-        marginTop:20,
-        fontFamily:'Poppins-Regular',
-        textAlign:'center',
-        fontSize:12
-    }
-})
-
-
 export default class doadoa extends Component {
    constructor(props){
        super(props);
@@ -141,3 +66,79 @@ export default class doadoa extends Component {
         );
       }
     }
+
+
+    const styles= StyleSheet.create({
+        container:{
+            flex: 1,
+            justifyContent: 'center',
+            alignItems: 'center',
+            width: null,
+             height:null,
+            
+             backgroundColor:'#99ccff'
+    
+        },
+        dzikir:{
+            marginTop:10,
+            width:'80%',
+            alignSelf:'center',
+            textAlignVertical:'center',
+            fontSize:30,  
+            backgroundColor:'#bbeeff',
+            justifyContent: 'center',
+            alignItems:'center',
+            textAlign:'center',
+            height:70,
+            marginBottom:20,
+            fontFamily:'AsparagusSprouts',
+            borderRadius:8
+          
+            
+            
+        },
+        latin:{
+            width:'100%',
+            justifyContent:'center',
+            textAlign:'center',
+            alignItems:'center',
+            height:40,
+            backgroundColor:'#0099c3'
+    
+        },
+        tombol:{
+            width:28,
+            height:28, 
+        
+        },
+        arab:{
+            marginTop:20,
+            fontSize:19,
+            textAlign:'center',
+        },
+        audio:{
+            flexDirection:'row',
+            backgroundColor:'#bbeeff',
+            borderRadius:15,
+            alignItems:'center',
+            justifyContent:'center',
+            height: 50,
+            width:'50%',
+            marginTop:10,
+            alignSelf:'center'
+            
+        },
+        latinn:{
+            marginTop:20,
+            textAlign:'center',
+            fontFamily:'AnisaSans',
+            fontSize:16
+    
+        },
+        arti:{
+            marginTop:20,
+            fontFamily:'Poppins-Regular',
+            textAlign:'center',
+            fontSize:12.5
+        }
+    })

@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
 import { Text, StyleSheet, View, ImageBackground, TouchableOpacity, Dimensions, Image } from 'react-native'
-
+import bgImage from '../menu/n1.jpg'
 
 const {width: WIDTH}= Dimensions.get('window')
 
 export default class Konsul extends Component {
   render() {
     return (
-      <View style={styles.backgroundContainer}>
+      <ImageBackground source={bgImage} style={styles.backgroundContainer}>
       <View style={{flex:2}}>
       <Image source={require('./kkons.jpg')} style={{width:360, height:200}}/>
       </View>
@@ -27,7 +27,7 @@ export default class Konsul extends Component {
         <Text style={styles.tik}>Ustadz Fauzan</Text>
         </TouchableOpacity>
       </View>
-      </View>
+      </ImageBackground>
     )
   }
 }
@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
       alignItems: 'center',
       width: null,
        height:null,
-       backgroundColor:'#0a0a33'
+       backgroundColor:'#ffffff'
     },
     touch:{
       width:100,

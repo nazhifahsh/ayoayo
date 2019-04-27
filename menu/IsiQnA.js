@@ -1,9 +1,15 @@
 export default[
     {
         user: 'doa1',
-        name: 'Apa itu Lapang Dada?',
-        isi:'Penjelasan Lapang Dada menurut Ust.Hanan Attaki',
-        subject: require('../src/video/1.mp4')
+        name: 'Apa itu Lapang Dada? (1)',
+        isi:'Penjelasan Lapang Dada menurut Ust.Hanan Attaki Part.1',
+        subject: require('../src/video/lapangdada1ha.mp4')
+    },
+    {
+        user: 'doa16',
+        name: 'Apa itu Lapang Dada? (2)',
+        isi:'Penjelasan Lapang Dada menurut Ust.Hanan Attaki Part.2',
+        subject: require('../src/video/lapangdada2ha.mp4')
     },
     {
         user:'doa2',
@@ -89,4 +95,23 @@ export default[
         isi:'Penjelasan Sabar menurut Ust.Hanan Attaki',
         subject: require('../src/video/15.mp4')
     },
+    {
+        user: 'doa17',
+        name: 'Kenapa Kita Harus Yakin?',
+        isi:'Penjelasan Yakin menurut Ust.Hanan Attaki',
+        subject: require('../src/video/yakinha.mp4')
+    },
+    {
+        user: 'doa18',
+        name: 'Alasan Kita Harus Tobat',
+        isi:'Allah Itu baik Banget menurut Ust.Hanan Attaki',
+        subject: require('../src/video/tobatha.mp4')
+    },
+    {
+        user: 'doa19',
+        name: 'Apa Yang Sebenarnya Kita Cari?',
+        isi:'Apa yang Sebenarnya Kita cari menurut Ust.Hanan Attaki',
+        subject: require('../src/video/ygkitacariha.mp4')
+    },
+
 ]

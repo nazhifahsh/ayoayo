@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, ScrollView, TouchableOpacity,ActivityIndicator,
 import SearchInput, { createFilter } from 'react-native-search-filter';
 import emails from './IsiQnA';
 import icon from '../src/image/magnifier32.png'
-import bgImage from '../src/image/koko2.jpg'
+import bgImage from '../src/image/qn1.jpg'
 import { ListItem } from 'react-native-elements';
 
 const KEYS_TO_FILTERS = ['name'];
@@ -22,8 +22,10 @@ export default class QandA extends Component {
     const filteredEmails = emails.filter(createFilter(this.state.searchTerm, KEYS_TO_FILTERS))
     return (
 
-      <View style={{backgroundColor:'#3b9248'}}>
+      <ImageBackground source={bgImage} style={styles.container}>
+
         <View style= {styles.SectionStyle}>
+        
        <Image source={icon} style={{marginStart:10}}/>
         <SearchInput 
           onChangeText={(term) => { this.searchUpdated(term) }} 
@@ -46,8 +48,7 @@ export default class QandA extends Component {
           })}
           
         </ScrollView>
-        <ActivityIndicator/>
-      </View>
+      </ImageBackground>
       
       
      
